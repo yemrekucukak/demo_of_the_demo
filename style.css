@@ -1,0 +1,43 @@
+body{background-color: rgba(225, 173, 1, 0.9);}
+#questions{
+    font-size: 1.8em;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10vh;
+}
+
+#title{text-align: center; font-size: 2.4em; font-weight: bolder;}
+
+#first_set_of_questions{
+    text-align: center;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    background-color: rgba(225, 173, 1, 0.9);
+}
+ 
+button{font-size: 0.6em; padding: 1vw; background-color:rgba(178, 172, 136, 0.8) ;}
+
+.q{
+    background-color: rgba(0, 95, 0, 0.6);
+    padding: 4.8vw;
+}
+
+#second_set_of_questions{
+    background-color: rgba(225, 173, 1, 0.9);
+    text-align: center;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    
+}
+
+#submit{padding:1vh; font-size: 1.2em; text-align: center; margin-left:24%; margin-right: 24%; margin-bottom: 12%; background-color: rgba(0, 95, 0, 0.6);}
+
+#result{
+    visibility: hidden;
+    text-align: center;
+    
+}
