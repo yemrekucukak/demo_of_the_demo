@@ -1,43 +1,60 @@
-body{background-color: rgba(225, 173, 1, 0.9);}
+body{background-color: rgba(0, 60, 0, 0.9); }
 #questions{
-    font-size: 1.8em;
+    font-size: 4.2em;
     margin-top: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10vh;
+    
 }
 
-#title{text-align: center; font-size: 2.4em; font-weight: bolder;}
-
-#first_set_of_questions{
+#all_questions{
     text-align: center;
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content:space-evenly;
-    background-color: rgba(225, 173, 1, 0.9);
+    gap: 12vh;
 }
  
-button{font-size: 0.6em; padding: 1vw; background-color:rgba(178, 172, 136, 0.8) ;}
+button{font-size: 0.6em; padding: 2.4vw; background-color:rgba(178, 172, 136, 1); border-radius: 300px;}
+
+button:hover{
+    background-color: rgba(225, 173, 1, 0.9);
+}
 
 .q{
-    background-color: rgba(0, 95, 0, 0.6);
-    padding: 4.8vw;
+    padding: 12vw;
+    padding-top: 24vh;
+    padding-bottom: 24vh;
+    border-radius: 72%;
+    background-color:  rgba(225, 173, 1, 0.9);
 }
 
-#second_set_of_questions{
-    background-color: rgba(225, 173, 1, 0.9);
-    text-align: center;
+.main_question{
     display: flex;
-    flex-direction:row;
-    justify-content: space-evenly;
-    
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    gap: 1.8vw;
+   
 }
 
-#submit{padding:1vh; font-size: 1.2em; text-align: center; margin-left:24%; margin-right: 24%; margin-bottom: 12%; background-color: rgba(0, 95, 0, 0.6);}
-
-#result{
-    visibility: hidden;
-    text-align: center;
-    
+.test_options{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6vh;
 }
+
+#submit{padding:1vh; font-size: 1.2em; text-align: center; margin-left:24%; margin-right: 24%; margin-bottom: 12%; background-color:rgba(178, 172, 136, 1); border-radius: 18px;}
+#submit:hover{background-color: rgba(225, 173, 1, 0.9);}
+
+#result{visibility: hidden; text-align: center;}
+#ordered_list{list-style: none;}
+
+#title{text-align: center; font-size: 1.2em; font-weight: bolder; color:rgba(225, 173, 1, 1);}
+
+
+.click_text{visibility: hidden; background-color:rgba(225, 173, 1, 1); border-radius: 18px; font-size: 0.72em;}
+
+.parentsforbuttons{display: flex; flex-direction: row; gap:30px; align-self: center;}
