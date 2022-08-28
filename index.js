@@ -214,7 +214,7 @@ submit_button.addEventListener('click', ()=>{
 
         for (let p=0; p<all_counters.length; p++){
             all_counters[p].style.visibility = 'hidden';
-            all_counters[p].innerText = "";
+            all_counters[p].innerText = "0";
         }
     }
 
