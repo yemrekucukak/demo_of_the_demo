@@ -1,13 +1,12 @@
-body{text-align: center; margin: 0; background-image: url('testimage.jpg'); background-size: cover;}
+body{text-align: center; margin: 0; background-image: url('bgi1.jpg'); background-size: cover;}
 
-#title{margin-top: 18vh; margin-bottom: 6vh; font-size: 6em; color: whitesmoke;}
+#title{margin-top: 18vh; margin-bottom: 6vh; font-size: 6em; color: whitesmoke; background-color: rgba(0,0,0,0.24);}
 
 
 #all_questions{
     display: flex;
     flex-direction: column;
-    background-image: url('testimage.jpg');
-    background-size:contain;
+  
   
 }
 
@@ -55,5 +54,3 @@ button:hover{background-color: rgba(240,240,240, 0.6);}
 
 #result{visibility: hidden; color: whitesmoke; font-size: 1.8em;}
 #ordered_list{list-style:none;font-size: 1.2em;}
-
-
