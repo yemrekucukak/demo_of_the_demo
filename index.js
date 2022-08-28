@@ -192,7 +192,8 @@ text_respect.style.visibility = 'visible';}
 
 let resulting_array = []
 let suggestions = []
-
+const body = document.getElementById('bud');
+const background_image_list = ["url('bgi6.jpg')", "url('bgi5.jpg')", "url('bgi7.jpg')", "url('bgi4.jpg')", "url('bgi3.jpg')", "url('bgi2.jpg')", "url('bgi1.jpg')"]
 let resulting_element = document.getElementById('result')
 let suggestion_list = document.getElementById('ordered_list')
 let each_element = ""
@@ -216,6 +217,8 @@ submit_button.addEventListener('click', ()=>{
             all_counters[p].style.visibility = 'hidden';
             all_counters[p].innerText = "0";
         }
+        image_index = Math.floor(Math.random()*6);
+        body.style.backgroundImage = background_image_list[image_index];
     }
 
     else if (submit_button.innerText == "Submit"){
