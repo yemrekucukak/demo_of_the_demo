@@ -1,217 +1,384 @@
-let germany = {name: "Germany", score: 0}; let england = {name: "England", score: 0}; let iceland = {name: "Iceland", score: 0}; let greenland = {name: "Greenland", score: 0}; 
-let norway = {name: "Norway", score: 0}; let sweden = {name: "Sweden", score: 0}; let finland = {name: "Finland", score: 0}; let ireland = {name: "Ireland", score: 0}; let portugal = {name: "Portugal", score: 0}; let spain = {name: "Spain", score: 0};
-let france = {name: "France", score: 0}; let andorra = {name: "Andorra", score: 0}; let belgium = {name: "Belgium", score: 0}; let switzerland = {name: "Switzerland", score: 0}; 
-let italy = {name: "Italy", score: 0}; let romania = {name: "Romania", score: 0}; let serbia = {name: "Serbia", score: 0}; let bulgaria = {name: "Serbia", score: 0}; let hungary = {name: "Hungary", score: 0}; let austria = {name: "Austria", score: 0}; 
-let poland = {name: "Poland", score: 0}; let estonia = {name: "Estonia", score: 0}; let moldova = {name: "Moldova", score: 0}; let greece = {name: "Greece", score: 0}; let turkiye = {name: "Turkiye", score: 0}; let netherlands = {name: "Netherlands", score: 0}; 
-let egypt = {name: "Egypt", score: 0}; let tunisia = {name: "Tunisia", score: 0}; let canada = {name: "Canada", score: 0}; let usa = {name: "United States of America", score: 0}; let mexico = {name: "Mexico", score: 0}; 
-let brazil = {name: "Brazil", score: 0}; let argentina = {name: "Argentina", score: 0}; let uae = {name: "United Arab Emirates", score: 0}; let china = {name: "China", score: 0}; 
-let india = {name: "India", score: 0}; let korea = {name: "South Korea", score: 0}; let thailand = {name: "Thailand", score: 0}; let pakistan = {name: "Pakistan", score: 0}; 
-let japan = {name: "Japan", score: 0}; let australia = {name: "Australia", score: 0}; let south_africa = {name: "South Africa", score: 0}; let nigeria = {name: "Nigeria", score: 0}; let indonesia = {name: "Indonesia", score: 0}; let kuweit = {name: "Kuweit", score: 0}; 
 
-let all_countries = [germany, england, iceland, greenland, norway, sweden, finland, ireland, portugal, spain, france, andorra, belgium, switzerland, italy, romania, serbia, bulgaria, hungary, austria, poland, estonia, moldova, greece, turkiye, netherlands, egypt, tunisia, canada, usa, mexico, brazil, argentina, uae, china, korea, japan, thailand, india, pakistan, australia, south_africa, kuweit, indonesia, nigeria]
+let Manchester = {name:'Manchester', country:'United Kingdom', score:0, cost:150, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['cycling', 'sightseeing'], safety:'safe', preference:['Culture', 'Pubs', 'Museums', 'Libraries' ] };
+let London = {name:'London', country:'United Kingdom', score:0, cost:240, people:'respectful', climate:'continental', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'shopping', 'cruise'], safety:'medium', preference:['Culture', 'Museums', 'Pubs', 'Art', 'Museums' ] };
+let Edinburgh = {name:'Edinburgh', country:'United Kingdom', score:0, cost:180, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture', 'Special Events'], activities:['sightseeing', 'hiking', 'cycling'], safety:'medium', preference:['Culture', 'Museums', 'Oceans','Art','Festivals', 'Museums', 'Libraries', 'Parks'] };
+let Cardiff  = {name:'Cardiff', country:'United Kingdom', score:0, cost:130, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'rafting'], safety:'medium', preference:['Culture', 'Museums', 'Oceans', 'Parks'] };
+let Birmingham = {name:'Birmingham', country:'United Kingdom', score:0, cost:110, people:'respectful', climate:'oceanic', attraction:[], activities:['chilling'], safety:'safe', preference:['Pubs', 'Parks'] };
+let Glasgow = {name:'Glasgow', country:'United Kingdom', score:0, cost:160, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'hiking', 'cycling', 'cruise'], safety:'safe', preference:['Culture', 'Museums', 'Art','Pubs', 'Festivals' ] };
+let Liverpool = {name:'Liverpool', country:'United Kingdom', score:0, cost:160, people:'sincere', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'shopping'], safety:'safe', preference:['Culture', 'Art', 'Museums', 'Ocean', 'Pubs'] };
+let Oxford = {name:'Oxford', country:'United Kingdom', score:0, cost:160, people:'respectful', climate:'continental', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'kayaking', 'chilling'], safety:'safe', preference:['Culture', 'Museums', 'Art', 'Libraries'] };
+let Bristol = {name:'Bristol', country:'United Kingdom', score:0, cost:160, people:'respectful', climate:'oceanic', attraction:['Architecture'], activities:['sightseeing', 'cycling', 'cruise', 'ballooning'], safety:'dangerous', preference:['Art', 'Festivals'] };
+let Cambridge = {name:'Cambridge', country:'United Kingdom', score:0, cost:190, people:'respectful', climate:'continental', attraction:['Culture', 'Architecture', 'Cuisine'], activities:['sightseeing','cruise', 'cycling'], safety:'medium', preference:['Libraries', 'Museums'] };
+let Brighton = {name:'Brighton', country:'United Kingdom', score:0, cost:150, people:'respectful', climate:'oceanic', attraction:['Cuisine', 'Architecture'], activities:['sightseeing', 'cycling'], safety:'safe', preference:['Oceans', 'Festivals', 'Parks'] };
 
-const varToString = obj => Object.keys(obj)[0]
+let Berlin = {name:'Berlin', country:'Germany', score:0, cost:140, people:'respectful', climate:'continental', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Culture', 'Museums', 'Parks'] };
+let Munich = {name:'Munich', country:'Germany', score:0, cost:190, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'cycling', 'shopping'], safety:'safe', preference:['Culture', 'Parks(natural)', 'Art'] };
+let Frankfurt = {name:'Frankfurt', country:'Germany', score:0, cost:120, people:'respectful', climate:'oceanic', attraction:['Culture', 'Cuisine'], activities:['sightseeing', 'shopping'], safety:'safe', preference:['Museums', 'Parks', 'Forests'] };
+let Hamburg = {name:'Hamburg', country:'Germany', score:0, cost:140, people:'respectful', climate:'oceanic', attraction:['Culture', 'Cuisine', 'Special'], activities:['sightseeing', 'shopping', 'kayaking'], safety:'safe', preference:['Oceans', 'Festivals'] };
+let Dresden = {name:'Dresden', country:'Germany', score:0, cost:120, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'kayaking'], safety:'safe', preference:['Culture', 'Parks'] };
+let Leipzig = {name:'Leipzig', country:'Germany', score:0, cost:130, people:'respectful', climate:'oceanic', attraction:['Culture'], activities:['sightseeing', 'kayaking', 'shopping'], safety:'safe', preference:['Culture', 'Museums'] };
+let Heidelberg = {name:'Heidelberg', country:'Germany', score:0, cost:150, people:'respectful', climate:'oceanic', attraction:['Culture', 'Natural'], activities:['sightseeing', 'chilling', 'kayaking'], safety:'safe', preference:['Culture', 'Forests'] };
+let Stuttgart = {name:'Stuttgart', country:'Germany', score:0, cost:130, people:'respectful', climate:'continental', attraction:['Culture'], activities:['sightseeing'], safety:'safe', preference:['Culture', 'Museums', 'Art', 'Libraries'] };
+let Koln = {name:'Köln', country:'Germany', score:0, cost:130, people:'respectful', climate:'oceanic', attraction:['Architecture'], activities:['sightseeing', 'shopping'], safety:'safe', preference:['Culture', 'Spiritual places'] };
 
-Economic = [portugal, romania, serbia, bulgaria, hungary, estonia, greece, tunisia, turkiye, brazil, argentina, thailand, pakistan, nigeria, mexico, indonesia, moldova]
-Wealthy = [germany, england, iceland, greenland, norway, sweden, finland, ireland, spain, france, belgium, italy, austria, usa, china, india, korea, japan, south_africa]
-Luxurious = [kuweit, uae, australia, switzerland, andorra]
-Nature = [iceland, greece, norway, sweden, finland, portugal, italy, switzerland, greece, turkiye, canada, usa, brazil, argentina, china, japan, australia, south_africa, pakistan, tunisia]
-Historical = [germany, england, spain, france, switzerland, italy, serbia, bulgaria, hungary, austria, poland, moldova, greece, turkiye, egypt, australia]
-Entertainment = [england, germany, ireland, spain, portugal, france, andorra, belgium, italy, usa, canada, uae, korea, thailand, japan, australia, south_africa, kuweit]
-Calm = [iceland, greenland, norway, finland, andorra, switzerland, estonia, canada, belgium, austria, greece]
-Adventerous = [ireland, portugal, romania, turkiye, tunisia, usa, mexico, brazil, argentina, china, india, thailand, pakistan, australia, south_africa, nigeria, indonesia]
-Cuisine = [spain, portugal, france, belgium, italy, hungary, greece, turkiye, mexico, china, india, korea, thailand, japan]
-People = [spain, portugal, italy, greece, turkiye, netherlands, tunisia, canada, mexico, korea, thailand, australia]
-Culture = [germany, england, iceland, greenland, finland, france, italy, austria, greece, turkiye, netherlands, egypt, tunisia, canada, usa, mexico, brazil, china, india, japan, pakistan, kuweit, nigeria]
-Cold = [iceland, greenland, norway, finland, switzerland, moldova, canada, sweden]
-Warm = [germany, france, andorra, belgium, serbia, bulgaria, hungary, austria, poland, estonia, netherlands, usa, china, korea]
-Sunny = [portugal, spain, italy, greece, turkiye, egypt ,tunisia, mexico, brazil, argentina, uae, india, thailand, pakistan, japan, australia, south_africa, nigeria, indonesia, kuweit]
-Rainy = [england, germany, ireland, romania, austria, estonia, moldova, china, india, indonesia]
-Sincere = [portugal, spain, italy ,romania, bulgaria, hungary, moldova, greece, turkiye, netherlands, tunisia, usa, mexico, brazil, argentina, india, thailand, pakistan, australia, south_africa, nigeria, indonesia, kuweit, uae]
-Respectful = [germany, england, iceland, greenland, norway, finland, ireland, france, andorra, belgium, switzerland, serbia, austria, poland, estonia, canada, china, korea, japan]
+let all_destinations = [Manchester, London, Edinburgh, Cardiff, Birmingham, Glasgow, Liverpool, Oxford, Bristol, Cambridge, Brighton, 
+Berlin, Munich, Frankfurt, Hamburg, Dresden, Leipzig, Heidelberg, Stuttgart, Koln]
 
-const text_ec = document.getElementById('text_ec'); const text_we = document.getElementById('text_we'); const text_lu = document.getElementById('text_lu'); const text_na = document.getElementById('text_na'); const text_hi = document.getElementById('text_hi'); const text_en = document.getElementById('text_en');
-const text_ca = document.getElementById('text_ca'); const text_ad = document.getElementById('text_ad'); const text_cu = document.getElementById('text_cu'); const text_pe = document.getElementById('text_pe'); const text_cult = document.getElementById('text_cult');
-const text_cold = document.getElementById('text_cold'); const text_warm = document.getElementById('text_warm'); const text_sunny = document.getElementById('text_sunny'); const text_rainy = document.getElementById('text_rainy');
-const text_sin = document.getElementById('text_sin'); const text_respect = document.getElementById('text_respect');
-
-let all_counters = [text_ec, text_we, text_lu, text_na, text_hi, text_en, text_ca, text_ad, text_ad, text_cu, text_pe, text_cult, text_cold, text_sunny, text_warm, text_rainy, text_sin, text_respect]
-
-const economic_button = document.getElementById("ec")
-let ec_click = 0;
-economic_button.addEventListener('click', ()=>{ec_click += 1; for(let i=0; i<(Economic).length; i++){Economic[i].score += 1; }; 
-if(ec_click==6){ec_click=0; for(let i=0; i<(Economic).length; i++){Economic[i].score -= 6; text_ec.style.visibility = 'hidden';}}
-else{
-text_ec.innerText = ec_click;
-text_ec.style.visibility = 'visible';}
-})
-
-const wealthy_button = document.getElementById("we")
-let we_click = 0;
-wealthy_button.addEventListener('click', ()=>{we_click += 1; for(let i=0; i<(Wealthy).length; i++){Wealthy[i].score += 1;}; 
-if(we_click==6){we_click=0; for(let i=0; i<(Wealthy).length; i++){Wealthy[i].score -= 6; text_we.style.visibility = 'hidden';}}
-else{
-text_we.innerText = we_click;
-text_we.style.visibility = 'visible';}
-})
-
-const luxurious_button = document.getElementById("lu")
-let lu_click = 0;
-luxurious_button.addEventListener('click', ()=>{lu_click += 1; for(let i=0; i<(Luxurious).length; i++){Luxurious[i].score += 1;}
-if(lu_click==6){lu_click=0; for(let i=0; i<(Luxurious).length; i++){Luxurious[i].score -= 6; text_lu.style.visibility = 'hidden';}}
-else{
-text_lu.innerText = lu_click;
-text_lu.style.visibility = 'visible';}
-})
-
-const nature_button = document.getElementById("na")
-let na_click = 0;
-nature_button.addEventListener('click', ()=>{na_click += 1; for(let i=0; i<(Nature).length; i++){Nature[i].score += 1;}
-if(na_click==6){na_click=0; for(let i=0; i<(Nature).length; i++){Nature[i].score -= 6; text_na.style.visibility = 'hidden';}}
-else{
-text_na.innerText = na_click;
-text_na.style.visibility = 'visible';}
-})
-
-const historical_button = document.getElementById("hi")
-let hi_click = 0;
-historical_button.addEventListener('click', ()=>{hi_click += 1; for(let i=0; i<(Historical).length; i++){Historical[i].score += 1;}
-if(hi_click==6){hi_click=0; for(let i=0; i<(Historical).length; i++){Historical[i].score -= 6; text_hi.style.visibility = 'hidden';}}
-else{
-text_hi.innerText = hi_click;
-text_hi.style.visibility = 'visible';}
-})
-
-const entertainment_button = document.getElementById("en")
-en_click = 0;
-entertainment_button.addEventListener('click', ()=>{en_click += 1; for(let i=0; i<(Entertainment).length; i++){Entertainment[i].score += 1;}
-if(en_click==6){en_click=0; for(let i=0; i<(Entertainment).length; i++){Entertainment[i].score -= 6; text_en.style.visibility = 'hidden';}}
-else{
-text_en.innerText = en_click;
-text_en.style.visibility = 'visible';}
-})
-
-const calm_button = document.getElementById("ca")
-let ca_click = 0;
-calm_button.addEventListener('click', ()=>{ca_click += 1; for(let i=0; i<(Calm).length; i++){Calm[i].score += 1;}
-if(ca_click==6){ca_click=0; for(let i=0; i<(Calm).length; i++){Calm[i].score -= 6; text_ca.style.visibility = 'hidden';}}
-else{
-text_ca.innerText = ca_click;
-text_ca.style.visibility = 'visible';}
-})
-
-const adventurous_button = document.getElementById("ad")
-let ad_click = 0; 
-adventurous_button.addEventListener('click', ()=>{ad_click += 1; for(let i=0; i<(Adventerous).length; i++){Adventerous[i].score += 1;}
-if(ad_click==6){ad_click=0; for(let i=0; i<(Adventerous).length; i++){Adventerous[i].score -= 6; text_ad.style.visibility = 'hidden';}}
-else{
-text_ad.innerText = ad_click;
-text_ad.style.visibility = 'visible';}
-})
-
-const cuisine_button = document.getElementById("cu")
-let cu_click = 0;
-cuisine_button.addEventListener('click', ()=>{cu_click += 1;for(let i=0; i<(Cuisine).length; i++){Cuisine[i].score += 1;}
-if(cu_click==6){cu_click=0; for(let i=0; i<(Cuisine).length; i++){Cuisine[i].score -= 6; text_cu.style.visibility = 'hidden';}}
-else{
-text_cu.innerText = cu_click;
-text_cu.style.visibility = 'visible';}
-})
-
-const people_button = document.getElementById("pe")
-let pe_click=0;
-people_button.addEventListener('click', ()=>{pe_click += 1; for(let i=0; i<(People).length; i++){People[i].score += 1;}
-if(pe_click==6){pe_click=0; for(let i=0; i<(People).length; i++){People[i].score -= 6; text_pe.style.visibility = 'hidden';}}
-else{
-text_pe.innerText = pe_click;
-text_pe.style.visibility = 'visible';}
-})
-
-const culture_button = document.getElementById("cult")
-let cult_click = 0;
-culture_button.addEventListener('click', ()=>{cult_click += 1; for(let i=0; i<(Culture).length; i++){Culture[i].score += 1;}
-if(cult_click==6){cult_click=0; for(let i=0; i<(Culture).length; i++){Culture[i].score -= 6; text_cult.style.visibility = 'hidden';}}
-else{
-text_cult.innerText = cult_click;
-text_cult.style.visibility = 'visible';}
-})
-
-const cold_button = document.getElementById("cold")
-let cold_click = 0;
-cold_button.addEventListener('click', ()=>{cold_click += 1; for(let i=0; i<(Cold).length; i++){Cold[i].score += 1;}
-if(cold_click==6){cold_click=0; for(let i=0; i<(Cold).length; i++){Cold[i].score -= 6; text_cold.style.visibility = 'hidden';}}
-else{
-text_cold.innerText = cold_click;
-text_cold.style.visibility = 'visible';}
-})
-
-const warm_button = document.getElementById("warm")
-let warm_click = 0;
-warm_button.addEventListener('click', ()=>{warm_click += 1; for(let i=0; i<(Warm).length; i++){Warm[i].score += 1;}
-if(warm_click==6){warm_click=0; for(let i=0; i<(Warm).length; i++){Warm[i].score -= 6; text_warm.style.visibility = 'hidden';}}
-else{
-text_warm.innerText = warm_click;
-text_warm.style.visibility = 'visible';}
-})
-
-const sunny_button = document.getElementById("sunny")
-let sunny_click = 0; 
-sunny_button.addEventListener('click', ()=>{sunny_click += 1; for(let i=0; i<(Sunny).length; i++){Sunny[i].score += 1;}
-if(sunny_click==6){sunny_click=0; for(let i=0; i<(Sunny).length; i++){Sunny[i].score -= 6; text_sunny.style.visibility = 'hidden';}}
-else{
-text_sunny.innerText = sunny_click;
-text_sunny.style.visibility = 'visible';}
-})
-
-const rainy_button = document.getElementById("rainy")
-let rainy_click = 0; 
-rainy_button.addEventListener('click', ()=>{rainy_click += 1; for(let i=0; i<(Rainy).length; i++){Rainy[i].score += 1;}
-if(rainy_click==6){rainy_click=0; for(let i=0; i<(Rainy).length; i++){Rainy[i].score -= 6; text_rainy.style.visibility = 'hidden';}}
-else{
-text_rainy.innerText = rainy_click;
-text_rainy.style.visibility = 'visible';}
-})
-
-const sincere_button = document.getElementById("sin")
-let sin_click = 0; 
-sincere_button.addEventListener('click', ()=>{sin_click += 1; for(let i=0; i<(Sincere).length; i++){Sincere[i].score += 1;}
-if(sin_click==6){sin_click=0; for(let i=0; i<(Sincere).length; i++){Sincere[i].score -= 6; text_sin.style.visibility = 'hidden';}}
-else{
-text_sin.innerText = sin_click;
-text_sin.style.visibility = 'visible';}
-})
-
-const respectful_button = document.getElementById("respect")
-let respect_click = 0; 
-respectful_button.addEventListener('click', ()=>{respect_click += 1; for(let i=0; i<(Respectful).length; i++){Respectful[i].score += 1;}
-if(respect_click==6){respect_click=0; for(let i=0; i<(Respectful).length; i++){Respectful[i].score -= 6; text_respect.style.visibility = 'hidden';}}
-else{
-text_respect.innerText = respect_click;
-text_respect.style.visibility = 'visible';}
-})
-
-let resulting_array = []
-let suggestions = []
 const body = document.getElementById('bud');
 const background_image_list = ["url('bgi6.jpg')", "url('bgi5.jpg')", "url('bgi7.jpg')", "url('bgi4.jpg')", "url('bgi3.jpg')", "url('bgi2.jpg')", "url('bgi1.jpg')"]
-let resulting_element = document.getElementById('result')
-let suggestion_list = document.getElementById('ordered_list')
-let each_element = ""
+let temp_array = [];
+
+//BUDGET SECTION
+const sliderreader = document.getElementById('myRange');
+const money_display = document.getElementById('slidernumber');
+sliderreader.oninput = function(){money_display.innerText = sliderreader.value + '$';
+temp_array = [];
+for(let i=0; i<all_destinations.length; i++){
+    if(sliderreader.value>= all_destinations[i].cost){
+        temp_array.push(all_destinations[i])
+}}}
+//BUDGET SECTION ENDS HERE
+
+//ATTRACTIONS SECTION
+const cuisine = document.getElementById('cu'); let cuisine_counter = document.getElementById('text_cu'); let cuisine_number=0;
+const culture = document.getElementById('cult'); let culture_counter = document.getElementById('text_cult'); let culture_number=0;
+const special_events = document.getElementById('sp'); let special_events_counter = document.getElementById('text_sp'); let special_events_number=0;
+const natural_sig = document.getElementById('na'); let natural_sig_counter = document.getElementById('text_na'); let natural_sig_number=0;
+const arch_sig = document.getElementById('as'); let arch_sig_counter = document.getElementById('text_as'); let arch_sig_number=0;
+
+cuisine.addEventListener('click', ()=>{if(cuisine_counter.innerText<5){cuisine_number+=1; cuisine_counter.innerText = cuisine_number; cuisine_counter.style.visibility='visible'; 
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Cuisine')){all_destinations[i].score += 1;} } }
+else{cuisine_counter.innerText = '0'; cuisine_counter.style.visibility='hidden'; cuisine_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Cuisine')){all_destinations[i].score -= 5;} }} })
+
+culture.addEventListener('click', ()=>{if(culture_counter.innerText<5){culture_number+=1; culture_counter.innerText = culture_number; culture_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Culture')){all_destinations[i].score += 1;} }}
+else{culture_counter.innerText = '0'; culture_counter.style.visibility='hidden'; culture_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Culture')){all_destinations[i].score -= 5;} }} })
+
+special_events.addEventListener('click', ()=>{if(special_events_counter.innerText<5){special_events_number+=1; special_events_counter.innerText = special_events_number; special_events_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Special')){all_destinations[i].score += 1;} }}
+else{special_events_counter.innerText = '0'; special_events_counter.style.visibility='hidden'; special_events_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Special')){all_destinations[i].score -= 5;} }} })
+
+natural_sig.addEventListener('click', ()=>{if(natural_sig_counter.innerText<5){natural_sig_number+=1; natural_sig_counter.innerText = natural_sig_number; natural_sig_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Natural')){all_destinations[i].score += 1;} }}
+else{natural_sig_counter.innerText = '0'; natural_sig_counter.style.visibility='hidden'; natural_sig_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Natural')){all_destinations[i].score -= 5;} }} })
+
+arch_sig.addEventListener('click', ()=>{if(arch_sig_counter.innerText<5){arch_sig_number+=1; arch_sig_counter.innerText = arch_sig_number; arch_sig_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Architecture')){all_destinations[i].score += 1;} }}
+else{arch_sig_counter.innerText = '0'; arch_sig_counter.style.visibility='hidden'; arch_sig_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Architecture')){all_destinations[i].score -= 5;} }} })
+//ATTRACTIONS ENDS HERE
+
+
+//TRAVEL PREFERENCE SECTION
+const forests = document.getElementById('forestsbutton'); let is_forest=false; const oceans = document.getElementById('oceansbutton'); let is_oceans=false; 
+const parks = document.getElementById('parksbutton'); let is_parks=false; 
+const mountains = document.getElementById('mountainsbutton'); let is_mountains=false; const wilderness = document.getElementById('wildernessbutton'); let is_wilderness=false; 
+const ancient = document.getElementById('ancientbutton'); let is_ancient=false; const museums = document.getElementById('museumsbutton'); let is_museums=false;
+const spiritual = document.getElementById('spiritualbutton'); let is_spiritual=false; const art = document.getElementById('artbutton'); let is_art=false;
+const libraries = document.getElementById('librariesbutton'); let is_libraries=false; 
+const festivals = document.getElementById('festivalsbutton'); let is_festivals=false; const pubss = document.getElementById('pubsbutton'); let is_pubs=false;
+const conventions = document.getElementById('conventionsbutton'); let is_conventions=false; const theme = document.getElementById('themebutton'); let is_theme=false;
+
+function forestfunction(){if(is_forest == true){is_forest=false; forests.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Forests')){all_destinations[i].score += 3;} }} 
+else if(is_forest == false){is_forest=true; forests.style.borderStyle='solid'; forests.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Forests')){all_destinations[i].score -= 3;} }}; forests.style.borderWidth='0.198vh';}
+
+function oceanfunction(){if(is_oceans == true){is_oceans=false; oceans.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Oceans')){all_destinations[i].score += 3;} }} 
+else if(is_oceans == false){is_oceans=true; oceans.style.borderStyle='solid'; oceans.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Oceans')){all_destinations[i].score -= 3;} }}; oceans.style.borderWidth='0.198vh';}
+
+function mountainfunction(){if(is_mountains == true){is_mountains=false; mountains.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Mountains')){all_destinations[i].score += 3;} }} 
+else if(is_mountains == false){is_mountains=true; mountains.style.borderStyle='solid'; mountains.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Mountains')){all_destinations[i].score -= 3;} }}; mountains.style.borderWidth='0.198vh';}
+
+function wildernessfunction(){if(is_wilderness == true){is_wilderness=false; wilderness.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Wilderness')){all_destinations[i].score += 3;} }} 
+else if(is_wilderness == false){is_wilderness=true; wilderness.style.borderStyle='solid'; wilderness.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Wilderness')){all_destinations[i].score -= 3;} }}; wilderness.style.borderWidth='0.198vh';}
+
+function parksfunction(){if(is_parks == true){is_parks=false; parks.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Parks')){all_destinations[i].score += 3;} }} 
+else if(is_parks == false){is_parks=true; parks.style.borderStyle='solid'; parks.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Parks')){all_destinations[i].score -= 3;} }}; parks.style.borderWidth='0.198vh';}
+
+function ancientfunction(){if(is_ancient == true){is_ancient=false; ancient.style.borderColor='rgba(0,0,0,0)'; 
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Ancient')){all_destinations[i].score += 3;} }} 
+else if(is_ancient == false){is_ancient=true; ancient.style.borderStyle='solid'; ancient.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Ancient')){all_destinations[i].score -= 3;} }}; ancient.style.borderWidth='0.198vh';}
+
+function museumfunction(){if(is_museums == true){is_museums=false; museums.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Museums')){all_destinations[i].score += 3;} }}
+else if(is_museums == false){is_museums=true; museums.style.borderStyle='solid'; museums.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Museums')){all_destinations[i].score -= 3;} }}; museums.style.borderWidth='0.198vh';}
+
+function artfunction(){if(is_art == true){is_art=false; art.style.borderColor='rgba(0,0,0,0)'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Art')){all_destinations[i].score += 3;} }} 
+else if(is_art == false){is_art=true; art.style.borderStyle='solid'; art.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Art')){all_destinations[i].score -= 3;} }}; art.style.borderWidth='0.198vh';}
+
+function spirituelfunction(){if(is_spiritual == true){is_spiritual=false; spiritual.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Spiritual')){all_destinations[i].score += 3;} }} 
+else if(is_spiritual == false){is_spiritual=true; spiritual.style.borderStyle='solid'; spiritual.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Spiritual')){all_destinations[i].score -= 3;} }}; spiritual.style.borderWidth='0.198vh';}
+
+function librariesfunction(){if(is_libraries == true){is_libraries=false; libraries.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Libraries')){all_destinations[i].score += 3;} }} 
+else if(is_libraries == false){is_libraries=true; libraries.style.borderStyle='solid'; libraries.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Libraries')){all_destinations[i].score -= 3;} }}; libraries.style.borderWidth='0.198vh';}
+
+function festivalfunction(){if(is_festivals == true){is_festivals=false; festivals.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Festivals')){all_destinations[i].score += 3;} }} 
+else if(is_festivals == false){is_festivals=true; festivals.style.borderStyle='solid'; festivals.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Festivals')){all_destinations[i].score -= 3;} }}; festivals.style.borderWidth='0.198vh';}
+
+function pubfunction(){if(is_pubs == true){is_pubs=false; pubss.style.borderColor='rgba(0,0,0,0)'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Pubs')){all_destinations[i].score += 3;} }} 
+else if(is_pubs == false){is_pubs=true; pubss.style.borderStyle='solid'; pubss.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Pubs')){all_destinations[i].score -= 3;} }}; pubss.style.borderWidth='0.198vh';}
+
+function conventionfunction(){if(is_conventions == true){is_conventions=false; conventions.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Conventions')){all_destinations[i].score += 3;} }} 
+else if(is_conventions == false){is_conventions=true; conventions.style.borderStyle='solid'; conventions.style.borderColor='snow';for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Conventions')){all_destinations[i].score -= 3;} }}; conventions.style.borderWidth='0.198vh';}
+
+function themefunction(){if(is_theme == true){is_theme=false; theme.style.borderColor='rgba(0,0,0,0)'; 
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Theme')){all_destinations[i].score += 3;} }} 
+else if(is_theme == false){is_theme=true; theme.style.borderStyle='solid'; theme.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Theme')){all_destinations[i].score -= 3;} }}; theme.style.borderWidth='0.198vh';}
+
+const natureelements = document.getElementById('natureelements');
+const naturetitle = document.getElementById('nature');
+let is_nature_clicked = false;
+function natureclick(){
+    if (natureelements.style.display === "block") {natureelements.style.display = "none";  naturetitle.style.backgroundColor = 'rgba(0,0,0,0.0)'; is_nature_clicked=false;} 
+    else {natureelements.style.display = "block"; natureelements.style.backgroundColor = 'rgba(0,0,0,0.6)'; naturetitle.style.backgroundColor = 'rgba(0,0,0,0.6)'; is_nature_clicked=true;}
+}
+naturetitle.addEventListener('mouseenter', ()=>{naturetitle.style.backgroundColor = 'rgba(0,0,0,0.6)';})
+naturetitle.addEventListener('mouseleave', ()=>{if(is_nature_clicked == false){naturetitle.style.backgroundColor = 'rgba(0,0,0,0.0)';}})
+
+const culturetitle = document.getElementById('culture');
+const cultureelements = document.getElementById('cultureelements');
+let is_culture_clicked = false;
+function cultureclick(){
+    if (cultureelements.style.display === "block") {cultureelements.style.display = "none"; culturetitle.style.backgroundColor = 'rgba(0,0,0,0.0)'; is_culture_clicked=false;} 
+    else {cultureelements.style.display = "block"; culturetitle.style.backgroundColor = 'rgba(0,0,0,0.6)'; cultureelements.style.backgroundColor = 'rgba(0,0,0,0.6)'; is_culture_clicked=true;}
+}
+culturetitle.addEventListener('mouseenter', ()=>{culturetitle.style.backgroundColor='rgba(0,0,0,0.6)';})
+culturetitle.addEventListener('mouseleave', ()=>{if(is_culture_clicked == false){culturetitle.style.backgroundColor = 'rgba(0,0,0,0.0)';}})
+
+const entertainmenttitle = document.getElementById('entertainment');
+const entertainmentelements = document.getElementById('entertainmentelements');
+let is_entertainment_clicked = false
+function entertainmentclick(){
+    if (entertainmentelements.style.display === "block") {entertainmentelements.style.display = "none"; entertainmenttitle.style.backgroundColor = 'rgba(0,0,0,0.0)'; is_entertainment_clicked=false;} 
+    else {entertainmentelements.style.display = "block"; entertainmenttitle.style.backgroundColor = 'rgba(0,0,0,0.6)'; entertainmentelements.style.backgroundColor = 'rgba(0,0,0,0.6)'; is_entertainment_clicked=true;}
+}
+entertainmenttitle.addEventListener('mouseenter', ()=>{entertainmenttitle.style.backgroundColor='rgba(0,0,0,0.6)';})
+entertainmenttitle.addEventListener('mouseleave', ()=>{if(is_entertainment_clicked == false){entertainmenttitle.style.backgroundColor = 'rgba(0,0,0,0.0)';}})
+
+let all_preferences = [forests, parks, oceans, mountains, wilderness, ancient, museums, spiritual, art, libraries, festivals, pubss, conventions, theme];
+let all_preferences_bool = [is_forest, is_parks, is_oceans, is_mountains, is_wilderness, is_ancient, is_museums, is_spiritual, is_art, is_libraries, is_festivals, is_pubs, is_conventions, is_theme];
+let all_preference_titles = [natureelements, cultureelements, entertainmentelements];
+let all_preference_titles_bool = [is_nature_clicked, is_culture_clicked, is_entertainment_clicked];
+let real_titles = [naturetitle, culturetitle, entertainmenttitle];
+//TRAVEL PREFERENCE ENDS HERE
+
+
+//PEOPLE SECTION
+const sincere = document.getElementById('sin'); let sincere_counter = document.getElementById('text_sin'); let sincere_number=0;
+const respect = document.getElementById('respect'); let respect_counter = document.getElementById('text_respect'); let respect_number=0;
+
+sincere.addEventListener('click', ()=>{if(sincere_counter.innerText<5){sincere_number+=1; sincere_counter.innerText = sincere_number; sincere_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].people == 'sincere'){all_destinations[i].score += 1;} }}
+else{sincere_counter.innerText = '0'; sincere_counter.style.visibility='hidden'; sincere_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].people == 'sincere'){all_destinations[i].score -= 5;} }} })
+
+respect.addEventListener('click', ()=>{if(respect_counter.innerText<5){respect_number+=1; respect_counter.innerText = respect_number; respect_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].people == 'respectful'){all_destinations[i].score += 1;} }}
+else{respect_counter.innerText = '0'; respect_counter.style.visibility='hidden'; respect_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].people == 'respectful'){all_destinations[i].score -= 5;} }} })
+//PEOPLE ENDS HERE
+
+let deez;
+//ACTIVITIES SECTION 
+const hiking = document.getElementById('hiking'); let is_hiking = false;
+hiking.addEventListener('click', ()=>{deez=hiking; if(is_hiking ==false){deez.style.borderColor='snow'; is_hiking=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('hiking')){all_destinations[i].score += 2;} }} 
+else if(is_hiking==true){is_hiking=false; deez.style.borderColor='rgba(0,0,0,0)'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('hiking')){all_destinations[i].score -= 2;} }}})
+
+const climbing = document.getElementById('climbing'); let is_climbing = false;
+climbing.addEventListener('click', ()=>{deez=climbing; if(is_climbing ==false){deez.style.borderColor='snow'; is_climbing=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('climbing')){all_destinations[i].score += 2;} }} 
+else if(is_climbing==true){is_climbing=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('climbing')){all_destinations[i].score -= 2;} }}})
+
+const parachuting = document.getElementById('parachuting'); let is_parachuting = false;
+parachuting.addEventListener('click', ()=>{deez=parachuting; if(is_parachuting ==false){deez.style.borderColor='snow'; is_parachuting=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('parachuting')){all_destinations[i].score += 2;} }} 
+else if(is_parachuting==true){is_parachuting=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('parachuting')){all_destinations[i].score -= 2;} }}})
+
+const scuba = document.getElementById('scuba'); let is_scuba = false;
+scuba.addEventListener('click', ()=>{deez=scuba; if(is_scuba ==false){deez.style.borderColor='snow'; is_scuba=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('scuba')){all_destinations[i].score += 2;} }} 
+else if(is_scuba==true){is_scuba=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('scuba')){all_destinations[i].score -= 2;} }}})
+
+const surfing = document.getElementById('surfing'); let is_surfing = false;
+surfing.addEventListener('click', ()=>{deez=surfing; if(is_surfing ==false){deez.style.borderColor='snow'; is_surfing=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('surfing')){all_destinations[i].score += 2;} }} 
+else if(is_surfing==true){is_surfing=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('surfing')){all_destinations[i].score -= 2;} }}})
+
+const balloon = document.getElementById('balloon'); let is_balloon = false;
+balloon.addEventListener('click', ()=>{deez=balloon; if(is_balloon ==false){deez.style.borderColor='snow'; is_balloon=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('ballooning')){all_destinations[i].score -= 2;} }} 
+else if(is_balloon==true){is_balloon=false; deez.style.borderColor='rgba(0,0,0,0)'; 
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('ballooning')){all_destinations[i].score -= 2;} }}})
+
+const horse = document.getElementById('horse'); let is_horse = false;
+horse.addEventListener('click', ()=>{deez=horse; if(is_horse ==false){deez.style.borderColor='snow'; is_horse=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('horse')){all_destinations[i].score += 2;} }} 
+else if(is_horse==true){is_horse=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('horse')){all_destinations[i].score -= 2;} }}})
+
+const skiing = document.getElementById('skiing'); let is_skiing = false;
+skiing.addEventListener('click', ()=>{deez=skiing; if(is_skiing ==false){deez.style.borderColor='snow'; is_skiing=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('skiing')){all_destinations[i].score += 2;} }} 
+else if(is_skiing==true){is_skiing=false; deez.style.borderColor='rgba(0,0,0,0)'; 
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('skiing')){all_destinations[i].score -= 2;} }}})
+
+const camping = document.getElementById('camping'); let is_camping = false;
+camping.addEventListener('click', ()=>{deez=camping; if(is_camping ==false){deez.style.borderColor='snow'; is_camping=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('camping')){all_destinations[i].score += 2;} }} 
+else if(is_camping==true){is_camping=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('camping')){all_destinations[i].score -= 2;} }}})
+
+const star = document.getElementById('star'); let is_star = false;
+star.addEventListener('click', ()=>{deez=star; if(is_star ==false){deez.style.borderColor='snow'; is_star=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('star')){all_destinations[i].score += 2;} }} 
+else if(is_star==true){is_star=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('star')){all_destinations[i].score -= 2;} }}})
+
+const cycling = document.getElementById('cycling'); let is_cycling = false;
+cycling.addEventListener('click', ()=>{deez=cycling; if(is_cycling ==false){deez.style.borderColor='snow'; is_cycling=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('cycling')){all_destinations[i].score += 2;} }} 
+else if(is_cycling==true){is_cycling=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('cycling')){all_destinations[i].score -= 2;} }}})
+
+const bird = document.getElementById('bird'); let is_bird = false;
+bird.addEventListener('click', ()=>{deez=bird; if(is_bird ==false){deez.style.borderColor='snow'; is_bird=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('bird')){all_destinations[i].score += 2;} }} 
+else if(is_bird==true){is_bird=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('bird')){all_destinations[i].score -= 2;} }}})
+
+const staycation = document.getElementById('staycation'); let is_staycation = false;
+staycation.addEventListener('click', ()=>{deez=staycation; if(is_staycation ==false){deez.style.borderColor='snow'; is_staycation=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('staycation')){all_destinations[i].score += 2;} }} 
+else if(is_staycation==true){is_staycation=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('staycation')){all_destinations[i].score -= 2;} }}})
+
+const sightseeing = document.getElementById('sightseeing'); let is_sightseeing = false;
+sightseeing.addEventListener('click', ()=>{deez=sightseeing; if(is_sightseeing ==false){deez.style.borderColor='snow'; is_sightseeing=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('sightseeing')){all_destinations[i].score += 2;} }} 
+else if(is_sightseeing==true){is_sightseeing=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('sightseeing')){all_destinations[i].score -= 2;} }}})
+
+const chilling = document.getElementById('chilling'); let is_chilling = false;
+chilling.addEventListener('click', ()=>{deez=chilling; if(is_chilling ==false){deez.style.borderColor='snow'; is_chilling=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('chilling')){all_destinations[i].score += 2;} }} 
+else if(is_chilling==true){is_chilling=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('chilling')){all_destinations[i].score -= 2;} }}})
+
+const rafting = document.getElementById('rafting'); let is_rafting = false;
+rafting.addEventListener('click', ()=>{deez=rafting; if(is_rafting ==false){deez.style.borderColor='snow'; is_rafting=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('rafting')){all_destinations[i].score += 2;} }} 
+else if(is_rafting==true){is_rafting=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('rafting')){all_destinations[i].score -= 2;} }}})
+
+const kayaking = document.getElementById('kayaking'); let is_kayaking = false;
+kayaking.addEventListener('click', ()=>{deez=kayaking; if(is_kayaking ==false){deez.style.borderColor='snow'; is_kayaking=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('kayaking')){all_destinations[i].score += 2;} }} 
+else if(is_kayaking==true){is_kayaking=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('kayaking')){all_destinations[i].score -= 2;} }}})
+
+const shopping = document.getElementById('shopping'); let is_shopping = false;
+shopping.addEventListener('click', ()=>{deez=shopping; if(is_shopping ==false){deez.style.borderColor='snow'; is_shopping=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('shopping')){all_destinations[i].score += 2;} }} 
+else if(is_shopping==true){is_shopping=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('shopping')){all_destinations[i].score -= 2;} }}})
+
+const cruise = document.getElementById('cruise'); let is_cruise = false;
+cruise.addEventListener('click', ()=>{deez=cruise; if(is_cruise ==false){deez.style.borderColor='snow'; is_cruise=true;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('cruise')){all_destinations[i].score += 2;} }} 
+else if(is_cruise==true){is_cruise=false; deez.style.borderColor='rgba(0,0,0,0)';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].activities.includes('cruise')){all_destinations[i].score -= 2;} }}})
+
+let all_activities = [hiking, climbing, parachuting, scuba, surfing, balloon, horse, skiing, camping, star, cycling, bird, staycation, sightseeing, chilling, rafting, shopping, kayaking, cruise];
+let all_activities_bool = [is_hiking, is_climbing, is_parachuting, is_scuba, is_scuba, is_surfing, is_balloon, is_horse, is_skiing, is_camping, is_star, is_cycling, is_bird, is_staycation, is_sightseeing, is_chilling, is_rafting, is_shopping, is_kayaking, is_cruise];
+//ACTIVITIES ENDS HERE
+
+
+//CLIMATE SECTION
+const equa = document.getElementById('equa'); let equa_counter = document.getElementById('text_equa'); let equa_number=0;
+const arctic = document.getElementById('arctic'); let arctic_counter = document.getElementById('text_arctic'); let arctic_number=0;
+const monsoon = document.getElementById('monsoon'); let monsoon_counter = document.getElementById('text_monsoon'); let monsoon_number=0;
+const dry = document.getElementById('dry'); let dry_counter = document.getElementById('text_dry'); let dry_number=0;
+const mediter = document.getElementById('mediter'); let mediter_counter = document.getElementById('text_mediter'); let mediter_number=0;
+const maritime = document.getElementById('maritime'); let maritime_counter = document.getElementById('text_maritime'); let maritime_number=0;
+const continental = document.getElementById('continental'); let continental_counter = document.getElementById('text_continental'); let continental_number=0;
+
+equa.addEventListener('click', ()=>{if(equa_counter.innerText<5){equa_number+=1; equa_counter.innerText = equa_number; equa_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'equa'){all_destinations[i].score += 1;} }}
+else{equa_counter.innerText = '0'; equa_counter.style.visibility='hidden'; equa_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'equa'){all_destinations[i].score -= 5;} }} })
+
+arctic.addEventListener('click', ()=>{if(arctic_counter.innerText<5){arctic_number+=1; arctic_counter.innerText = arctic_number; arctic_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'arctic'){all_destinations[i].score += 1;} }}
+else{arctic_counter.innerText = '0'; arctic_counter.style.visibility='hidden'; arctic_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'arctic'){all_destinations[i].score -= 5;} }} })
+
+monsoon.addEventListener('click', ()=>{if(monsoon_counter.innerText<5){monsoon_number+=1; monsoon_counter.innerText = monsoon_number; monsoon_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'monsoon'){all_destinations[i].score += 1;} }}
+else{monsoon_counter.innerText = '0'; monsoon_counter.style.visibility='hidden'; monsoon_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'monsoon'){all_destinations[i].score -= 5;} }} })
+
+dry.addEventListener('click', ()=>{if(dry_counter.innerText<5){dry_number+=1; dry_counter.innerText = dry_number; dry_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'dry'){all_destinations[i].score += 1;} }}
+else{dry_counter.innerText = '0'; dry_counter.style.visibility='hidden'; dry_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'dry'){all_destinations[i].score -= 5;} }} })
+
+mediter.addEventListener('click', ()=>{if(mediter_counter.innerText<5){mediter_number+=1; mediter_counter.innerText = mediter_number; mediter_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'mediterranen'){all_destinations[i].score += 1;} }}
+else{mediter_counter.innerText = '0'; mediter_counter.style.visibility='hidden'; mediter_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'mediterranen'){all_destinations[i].score -= 5;} }} })
+
+maritime.addEventListener('click', ()=>{if(maritime_counter.innerText<5){maritime_number+=1; maritime_counter.innerText = maritime_number; maritime_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'oceanic'){all_destinations[i].score += 1;} }}
+else{maritime_counter.innerText = '0'; maritime_counter.style.visibility='hidden'; maritime_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'oceanic'){all_destinations[i].score -= 5;} }} })
+
+continental.addEventListener('click', ()=>{if(continental_counter.innerText<5){continental_number+=1; continental_counter.innerText = continental_number; continental_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'continental'){all_destinations[i].score += 1;} }}
+else{continental_counter.innerText = '0'; continental_counter.style.visibility='hidden'; continental_number=0;
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == 'continental'){all_destinations[i].score -= 5;} }} })
+
+//CLIMATE ENDS HERE
+let all_counters = [cuisine_counter, culture_counter, special_events_counter, natural_sig_counter, arch_sig_counter, sincere_counter, respect_counter, equa_counter, arctic_counter, monsoon_counter, dry_counter, mediter_counter, maritime_counter, continental_counter];
+let resulting_array = [];
+let suggestions = [];
+let resulting_element = document.getElementById('result');
+let suggestion_list = document.getElementById('ordered_list');
+let each_element = "";
 
 const submit_button = document.getElementById('submit')
 
 submit_button.addEventListener('click', ()=>{
 
     if (submit_button.innerText == "Reset"){
-        ec_click=0; we_click=0; lu_click=0; na_click=0; hi_click=0; en_click=0; ca_click=0; ad_click=0; cu_click=0; pe_click=0; cult_click=0; cold_click=0; warm_click=0; rainy_click=0; sunny_click=0; sin_click=0; respect_click=0;
-       
-        for (let p=0; p<all_countries.length; p++){
-            all_countries[p].score = 0;}
+        cuisine_number=0; culture_number=0; special_events_number=0; natural_sig_number=0; arch_sig_number=0; sincere_number=0; respect_number=0; equa_number=0; arctic_number=0; monsoon_number=0; dry_number=0; mediter_number=0;maritime_number=0; continental_number=0;
+        for (let p=0; p<all_destinations.length; p++){
+            all_destinations[p].score = 0;}
         submit_button.innerText = "Submit"
 
         while(suggestion_list.hasChildNodes()){suggestion_list.removeChild(suggestion_list.firstChild)}
         each_element = "";
         resulting_element.style.visibility = "hidden";
+
+        for(let h=0; h<all_activities.length; h++){all_activities[h].style.borderColor ='rgba(0,0,0,0)'; all_activities_bool[h]=false;}
+        for(let y=0; y<all_preferences.length; y++){all_preferences[y].style.borderColor = 'rgba(0,0,0,0)'; all_preference_titles_bool[y]=false;}
+        for(let t=0; t<all_preference_titles.length; t++){all_preference_titles[t].style.display='none'; real_titles[t].style.backgroundColor='rgba(0,0,0,0)'; all_preference_titles_bool[t]=false;}
 
         for (let p=0; p<all_counters.length; p++){
             all_counters[p].style.visibility = 'hidden';
@@ -222,11 +389,12 @@ submit_button.addEventListener('click', ()=>{
     }
 
     else if (submit_button.innerText == "Submit"){
-    resulting_array = all_countries.sort((a,b) => (a.score < b.score) ? 1 : ((b.score < a.score) ? -1 : 0)) 
-    suggestions = resulting_array.slice(0,5); 
+    resulting_array = temp_array.sort((a,b) => (a.score < b.score) ? 1 : ((b.score < a.score) ? -1 : 0)) 
+    if(resulting_array.length >=5){
+    suggestions = resulting_array.slice(0,5);}else{suggestions=resulting_array;}
     resulting_element.style.visibility = 'visible';
     for (let k=0; k< suggestions.length; k++){
-        each_element = each_element + "<li>" + suggestions[k].name+ "</li>"
+        each_element = each_element + "<li>" + suggestions[k].name + ", " + suggestions[k].country +  "</li>"
     }
     suggestion_list.innerHTML = each_element;
     submit_button.innerText = "Reset";
