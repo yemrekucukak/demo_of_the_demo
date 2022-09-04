@@ -8,23 +8,114 @@
 
 <body id="bud">
 
-   <div id="nav_container"> <div id="nav_bar"> <div class="nav_element">Home</div>    <div class="nav_element">Cat1</div>  <div class="nav_element">Cat2</div>  <div class="nav_element">Cat3</div>   <div class="nav_element">Cat4</div>  <div class="nav_element">Cat5</div>   </div> </div>
+   <div id="nav_container"> <div id="nav_bar"> <div class="nav_element">Home</div>    <div class="nav_element">Travel</div>  <div class="nav_element">Sport</div>  <div class="nav_element">Movies</div>   <div class="nav_element">Food</div>  <div class="nav_element">Shows</div>   </div> </div>
 
 
     <div id="questions">
 
-<div id="title">Vacation Destination Generator</div>
+<div id="title">Travel Destination Generator</div>
 
  <div id="all_questions">
 
-    <div id="first_question" class="main_question">   <div id="budget" class="q">Budget</div>      <div class="test_options"> <div class="parentsforbuttons"><button id="ec">Economic</button> <p class="click_text" id="text_ec">0</p></div> <div class="parentsforbuttons"><button id="we">Wealthy</button> <p class="click_text" id="text_we">0</p></div> <div class="parentsforbuttons"><button id="lu">Luxurious</button><p class="click_text" id="text_lu">0</p></div></div>      </div>
-    <div id="second_question" class="main_question">  <div id="type" class="q">Type</div>      <div class="test_options"> <div class="parentsforbuttons"><button id="na">Nature</button><p class="click_text" id="text_na">0</p></div> <div class="parentsforbuttons"><button id="hi">Historical</button><p class="click_text" id="text_hi">0</p></div> <div class="parentsforbuttons"><button id="en">Entertainment</button><p class="click_text" id="text_en">0</p> </div> </div>      </div>         
-    <div id="third_question" class="main_question">   <div id="safety" class="q">Adrenalin Level</div>      <div class="test_options"> <div class="parentsforbuttons"><button id="ca">Calm</button><p class="click_text" id="text_ca">0</p></div> <div class="parentsforbuttons"><button id="ad">Adventurous</button><p class="click_text" id="text_ad">0</p></div> </div>      </div> 
+    <div id="budget_container" class="main_question">   <div id="budget" class="q">Budget <div class="explanations">Budget is generally the most important factor that travelers consider. Please select a budget for daily expenses on the slider.</div></div>   <div class="slidecontainer"> <input type="range" min="50" max="500" value="120" class="slider" id="myRange"> <div id="slider_value">Average Daily Budget: <div id="slidernumber">120$</div></div></div>   </div>
+    
+   
+  <div id="attraction" class="main_question">   <div id="safety" class="q">Attractions <div class="explanations">What makes a country attractive in your opinion? Delicious dishes prepared according to profound cultures around the world or their heritage and culture? What about special events that happen only in one country or even in one city? Some places are blessed by mother nature, does this sound attractive to you? Or you may want to observe the beauty of architecture around the world? By clicking multiple times on the buttons you can increase the importantance of your choice. </div> </div>     <div class="test_options"> 
 
-    <div id="fourth_question" class="main_question">       <div id="attraction" class="q">Attraction</div>      <div class="test_options"> <div class="parentsforbuttons"><button id="cu">Cuisine</button><p class="click_text" id="text_cu">0</p></div> <div class="parentsforbuttons"> <button id="pe">People</button><p class="click_text" id="text_pe">0</p></div> <div class="parentsforbuttons"><button id="cult">Culture</button><p class="click_text" id="text_cult">0</p></div></div>      </div>
-    <div id="fifth_question" class="main_question">        <div id="climate" class="q">Climate</div>      <div class="test_options"><div class="parentsforbuttons"><button id="cold">Cold</button><p class="click_text" id="text_cold">0</p></div> <div class="parentsforbuttons"><button id="warm">Warm</button><p class="click_text" id="text_warm">0</p></div> <div class="parentsforbuttons"><button id="sunny">Sunny</button><p class="click_text" id="text_sunny">0</p></div> <div class="parentsforbuttons"><button id="rainy">Rainy</button><p class="click_text" id="text_rainy">0</p></div> </div>      </div>
-    <div id="sixth_question" class="main_question">        <div id="people" class="q">People</div>      <div class="test_options"> <div class="parentsforbuttons"><button id="sin">Sincere</button><p class="click_text" id="text_sin">0</p></div> <div class="parentsforbuttons"><button id="respect">Respectful to Personal Space</button><p class="click_text" id="text_respect">0</p></div> </div>      </div>
+    <div class="parentsforbuttons"><button id="cu">Cuisine</button><p class="click_text" id="text_cu">0</p></div>   
+    <div class="parentsforbuttons"><button id="cult">Culture</button><p class="click_text" id="text_cult">0</p></div>         
+    <div class="parentsforbuttons"><button id="sp">Special Events</button><p class="click_text" id="text_sp">0</p></div> 
+    <div class="parentsforbuttons"><button id="na">Natural Significance</button><p class="click_text" id="text_na">0</p></div> 
+    <div class="parentsforbuttons"><button id="as">Architectural Significance</button><p class="click_text" id="text_as">0</p></div>            
+  
+  </div>      </div> 
 
+
+    <div id="preferences" class="main_question">  <div id="type" class="q">Travel Preference <div class="explanations">What kind of a trip you would prefer? What fascinates you about the nature the most? What makes you curious about different cultures? Which places give you the most fun? You can specify your preference by choosing from dropdown menus.</div> </div>       <div id="dropdowns"> 
+        
+      <div> <div id="nature" class="droptitle" onclick="natureclick()">Nature</div> 
+        <div id="natureelements"> <div class="dropclassnature" id="forestsbutton" onclick="forestfunction()">Forests</div> 
+        <div class="dropclassnature" id="mountainsbutton"  onclick="mountainfunction()">Mountains</div> 
+        <div class="dropclassnature" id="oceansbutton"  onclick="oceanfunction()">Oceans&Seas</div>  
+        <div class="dropclassnature" id="parksbutton"  onclick="parksfunction()">Parks</div>  
+        <div class="dropclassnature" id="wildernessbutton"  onclick="wildernessfunction()">Wildernesses</div>  
+      </div>   </div>        
+        <div> <div id="culture" class="droptitle" onclick="cultureclick()">Culture</div>  
+        <div id="cultureelements"> <div class="dropclassculture" id="ancientbutton"  onclick="ancientfunction()">Ancient Cities</div> 
+        <div class="dropclassculture" id="museumsbutton"  onclick="museumfunction()">Museums</div>  
+        <div class="dropclassculture" id="librariesbutton"  onclick="librariesfunction()">Libraries</div> 
+        <div class="dropclassculture" id="spiritualbutton"  onclick="spirituelfunction()">Spiritual Places</div>  
+        <div class="dropclassculture" id="artbutton"  onclick="artfunction()">Art</div> 
+       </div>   </div>        
+        <div> <div id="entertainment" class="droptitle" onclick="entertainmentclick()">Entertainment</div>  
+        <div id="entertainmentelements"><div class="dropclassentertainment" id="festivalsbutton" onclick="festivalfunction()">Festivals</div> 
+        <div class="dropclassentertainment" id="conventionsbutton" onclick="conventionfunction()">Conventions</div> 
+        <div class="dropclassentertainment" id="pubsbutton" onclick="pubfunction()">Clubs&Pubs&Cafes</div> 
+         <div class="dropclassentertainment" id="themebutton" onclick="themefunction()">Theme Parks</div>  
+         </div>   </div>    
+      </div>     </div>    
+    
+
+    <div id="people_container" class="main_question">        <div id="people" class="q">People <div class="explanations">Some travelers prefer local people to be respectful to personal space; others prefer them to be sincere and welcoming. By clicking multiple times on the buttons you can increase the importantance of your choice.</div></div>     
+     <div class="test_options"> <div class="parentsforbuttons"><button id="sin">Sincere</button><p class="click_text" id="text_sin">0</p></div> 
+     <div class="parentsforbuttons"><button id="respect">Respectful to Personal Space</button><p class="click_text" id="text_respect">0</p></div> </div>      </div>
+
+
+    <div id="activities_container" class="main_question"> <div id="activities" class="q">Activities <div class="explanations">Which activities you'd like to try on your travel? You can choose multiple activities below. </div></div> 
+    <div id="selection_items1">
+      <div class="selection" id="hiking">Hiking</div> 
+      <div class="selection" id="climbing">Climbing</div> 
+      <div class="selection" id="parachuting">Parachuting</div> 
+      <div class="selection" id="scuba">Scuba-diving</div>   
+      <div class="selection" id="surfing">Surfing</div>  
+      <div class="selection" id="balloon">Hot Air Ballooning</div>       
+     </div>
+    <div id="selection_items2">
+        <div class="selection" id="horse">Horse Riding</div>
+        <div class="selection" id="skiing">Skiing</div> 
+        <div class="selection" id="camping">Camping</div> 
+        <div class="selection" id="star">Star Gazing</div> 
+        <div class="selection" id="cycling">Cycling</div>  
+        <div class="selection" id="bird">Bird Gazing</div>   
+        <div class="selection" id="staycation">Staycation</div>      
+      </div>
+    <div id="selection_items3">
+        <div class="selection" id="sightseeing">Sightseeing</div> 
+        <div class="selection" id="chilling">Chilling</div> 
+        <div class="selection" id="rafting">Rafting</div> 
+        <div class="selection" id="shopping">Shopping</div> 
+        <div class="selection" id="kayaking">Kayaking</div>  
+        <div class="selection" id="cruise">Cruise</div>   
+        <div class="selection">Seven</div>     
+       </div>
+    </div> 
+    
+
+
+  
+  
+  
+<div id="climate_section" class="main_question">        <div id="climate" class="q">Climate <div class="explanations">Which weather conditions you'd prefer in your travel destination?
+  <br> </br>
+  <div>Equatorial climate is a hot and moistt climate all around the year. It rains nearly everyday.</div> 
+  <div>Subarctic climate is characterised by long and really cold winters and short warm summers. </div>
+  <div>Tropical monsoon climates have monthly mean temperatures of 18-20°C in each month and have some dry periods.</div>
+  <div>Tropical dry climate is also know as savanna climate has wet and dry periods. Drought is present in dry periods.</div>
+  <div>Mediterranen climates have hot, dry summers and mild, wet winters. </div>
+  <div>Oceanic climates are humid temperate climates with cool summers and mild winters. Rain is frequent. </div>
+  <div>Continental climates have cold winters and hot summers. Winters can be freezing. </div>
+</div></div>      
+  <div class="test_options">
+    <div class="parentsforbuttons"><button id="maritime">Oceanic</button><p class="click_text" id="text_maritime">0</p></div> 
+    <div class="parentsforbuttons"><button id="equa">Equatorial</button><p class="click_text" id="text_equa">0</p></div> 
+    <div class="parentsforbuttons"><button id="arctic">Sub-arctic</button><p class="click_text" id="text_arctic">0</p></div> 
+    <div class="parentsforbuttons"><button id="continental">Continental</button><p class="click_text" id="text_continental">0</p></div> 
+    <div class="parentsforbuttons"><button id="dry">Tropical Dry</button><p class="click_text" id="text_dry">0</p></div> 
+    <div class="parentsforbuttons"><button id="mediter">Mediterranen</button><p class="click_text" id="text_mediter">0</p></div> 
+    <div class="parentsforbuttons"><button id="monsoon">Tropical Monsoon</button><p class="click_text" id="text_monsoon">0</p></div> 
+    
+</div>      </div>
+   
 
  </div>
 
