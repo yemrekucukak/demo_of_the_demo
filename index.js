@@ -12,7 +12,7 @@ let Cambridge = {name:'Cambridge', country:'United Kingdom', score:0, cost:190, 
 let Brighton = {name:'Brighton', country:'United Kingdom', score:0, cost:150, people:'respectful', climate:'oceanic', attraction:['Cuisine', 'Architecture'], activities:['sightseeing', 'cycling'], safety:'safe', preference:['Oceans', 'Festivals', 'Parks'] };
 
 let Berlin = {name:'Berlin', country:'Germany', score:0, cost:140, people:'respectful', climate:'continental', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Culture', 'Museums', 'Parks'] };
-let Munich = {name:'Munich', country:'Germany', score:0, cost:190, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'cycling', 'shopping'], safety:'safe', preference:['Culture', 'Parks(natural)', 'Art'] };
+let Munich = {name:'Munich', country:'Germany', score:0, cost:190, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'cycling', 'shopping'], safety:'safe', preference:['Culture', 'Parks', 'Art'] };
 let Frankfurt = {name:'Frankfurt', country:'Germany', score:0, cost:120, people:'respectful', climate:'oceanic', attraction:['Culture', 'Cuisine'], activities:['sightseeing', 'shopping'], safety:'safe', preference:['Museums', 'Parks', 'Forests'] };
 let Hamburg = {name:'Hamburg', country:'Germany', score:0, cost:140, people:'respectful', climate:'oceanic', attraction:['Culture', 'Cuisine', 'Special'], activities:['sightseeing', 'shopping', 'kayaking'], safety:'safe', preference:['Oceans', 'Festivals'] };
 let Dresden = {name:'Dresden', country:'Germany', score:0, cost:120, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'kayaking'], safety:'safe', preference:['Culture', 'Parks'] };
@@ -21,8 +21,25 @@ let Heidelberg = {name:'Heidelberg', country:'Germany', score:0, cost:150, peopl
 let Stuttgart = {name:'Stuttgart', country:'Germany', score:0, cost:130, people:'respectful', climate:'continental', attraction:['Culture'], activities:['sightseeing'], safety:'safe', preference:['Culture', 'Museums', 'Art', 'Libraries'] };
 let Koln = {name:'Köln', country:'Germany', score:0, cost:130, people:'respectful', climate:'oceanic', attraction:['Architecture'], activities:['sightseeing', 'shopping'], safety:'safe', preference:['Culture', 'Spiritual places'] };
 
+let Rome = {name:'Rome', country:'Italy', score:0, cost:140, people:'sincere', climate:'mediterranean', attraction:['Culture', 'Cuisine', 'Special', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling' ], safety:'safe', preference:['Museums', 'Libraries', 'Ancient', 'Art', 'Pubs', 'Oceans', 'Festivals'] };
+let Venice = {name:'Venice', country:'Italy', score:0, cost:150, people:'sincere', climate:'oceanic', attraction:['Culture', 'Cuisine', 'Special', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Museums', 'Libraries', 'Art', 'Oceans', 'Festivals'] };
+let Florence = {name:'Florence', country:'Italy', score:0, cost:130, people:'sincere', climate:'mediterranean', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Museums', 'Art', 'Parks', ] };
+let Milano = {name:'Milano', country:'Italy', score:0, cost:130, people:'sincere', climate:'continental', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Museums', 'Art'] };
+let Napoli = {name:'Napoli', country:'Italy', score:0, cost:120, people:'sincere', climate:'mediterranean', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Museums', 'Oceans', 'Mountains', 'Ancient', 'Parks'] };
+
+let Tokyo = {name:'Tokyo', country:'Japan', score:0, cost:150, people:'respectful', climate:'monsoon', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Oceans', 'Parks', 'Museums', 'Ancient', 'Pubs', 'Art', 'Festivals', 'Theme'] };
+let Osaka = {name:'Osaka', country:'Japan', score:0, cost:70, people:'respectful', climate:'continental', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Oceans', 'Museums', 'Art', 'Theme', 'Pubs', 'Festivals', 'Spiritual' ] };
+let Okinawa = {name:'Okinawa', country:'Japan', score:0, cost:160, people:'respectful', climate:'monsoon', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling', 'scuba', 'surfing', 'staycation', 'cruise'], safety:'safe', preference:['Oceans', 'Mountains','Pubs' ] };
+let Kyoto = {name:'Kyoto', country:'Japan', score:0, cost:150, people:'respectful', climate:'dry', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling', 'hiking', 'staycation'], safety:'safe', preference:['Oceans', 'Parks', 'Forests', 'Spiritual', 'Museums', 'Mountains', 'Art' ] };
+let Nara= {name:'Nara', country:'Japan', score:0, cost:130, people:'respectful', climate:'monsoon', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Parks', 'Museums', 'Mountains', 'Spiritual'] };
+let Sapporo= {name:'Sapporo', country:'Japan', score:0, cost:110, people:'respectful', climate:'arctic', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling', 'skiing', 'hiking', 'climbing'], safety:'safe', preference:['Mountains', 'Forests', 'Parks', 'Festivals'] };
+
+
+
 let all_destinations = [Manchester, London, Edinburgh, Cardiff, Birmingham, Glasgow, Liverpool, Oxford, Bristol, Cambridge, Brighton, 
-Berlin, Munich, Frankfurt, Hamburg, Dresden, Leipzig, Heidelberg, Stuttgart, Koln]
+Berlin, Munich, Frankfurt, Hamburg, Dresden, Leipzig, Heidelberg, Stuttgart, Koln,
+Rome, Venice, Florence, Milano, Napoli,
+Tokyo, Osaka, Okinawa, Kyoto, Nara, Sapporo]
 
 const body = document.getElementById('bud');
 const background_image_list = ["url('bgi6.jpg')", "url('bgi5.jpg')", "url('bgi7.jpg')", "url('bgi4.jpg')", "url('bgi3.jpg')", "url('bgi2.jpg')", "url('bgi1.jpg')"]
@@ -39,6 +56,9 @@ for(let i=0; i<all_destinations.length; i++){
 }}}
 //BUDGET SECTION ENDS HERE
 
+const preferencecontainer = document.getElementById('preferences')
+let is_preference_activated = 0;
+
 //ATTRACTIONS SECTION
 const cuisine = document.getElementById('cu'); let cuisine_counter = document.getElementById('text_cu'); let cuisine_number=0;
 const culture = document.getElementById('cult'); let culture_counter = document.getElementById('text_cult'); let culture_number=0;
@@ -46,30 +66,39 @@ const special_events = document.getElementById('sp'); let special_events_counter
 const natural_sig = document.getElementById('na'); let natural_sig_counter = document.getElementById('text_na'); let natural_sig_number=0;
 const arch_sig = document.getElementById('as'); let arch_sig_counter = document.getElementById('text_as'); let arch_sig_number=0;
 
-cuisine.addEventListener('click', ()=>{if(cuisine_counter.innerText<5){cuisine_number+=1; cuisine_counter.innerText = cuisine_number; cuisine_counter.style.visibility='visible'; 
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Cuisine')){all_destinations[i].score += 1;} } }
+cuisine.addEventListener('click', ()=>{if(cuisine_counter.innerText<5){is_preference_activated+=1; preferencecontainer.style.display='flex'; cuisine_number+=1; cuisine_counter.innerText = cuisine_number; cuisine_counter.style.visibility='visible'; 
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Cuisine')){all_destinations[i].score += 1;} } 
+cuisinetitle.style.display='flex';}
 else{cuisine_counter.innerText = '0'; cuisine_counter.style.visibility='hidden'; cuisine_number=0;
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Cuisine')){all_destinations[i].score -= 5;} }} })
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Cuisine')){all_destinations[i].score -= 5;} }
+is_preference_activated-=5; if(is_preference_activated==0){preferencecontainer.style.display='none';}cuisinetitle.style.display='none';} })
 
-culture.addEventListener('click', ()=>{if(culture_counter.innerText<5){culture_number+=1; culture_counter.innerText = culture_number; culture_counter.style.visibility='visible';
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Culture')){all_destinations[i].score += 1;} }}
+culture.addEventListener('click', ()=>{if(culture_counter.innerText<5){is_preference_activated+=1; preferencecontainer.style.display='flex'; culture_number+=1; culture_counter.innerText = culture_number; culture_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Culture')){all_destinations[i].score += 1;} }
+culturetitle.style.display='flex';}
 else{culture_counter.innerText = '0'; culture_counter.style.visibility='hidden'; culture_number=0;
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Culture')){all_destinations[i].score -= 5;} }} })
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Culture')){all_destinations[i].score -= 5;} }
+is_preference_activated-=5; if(is_preference_activated==0){preferencecontainer.style.display='none';}culturetitle.style.display='none';} })
 
-special_events.addEventListener('click', ()=>{if(special_events_counter.innerText<5){special_events_number+=1; special_events_counter.innerText = special_events_number; special_events_counter.style.visibility='visible';
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Special')){all_destinations[i].score += 1;} }}
+special_events.addEventListener('click', ()=>{if(special_events_counter.innerText<5){is_preference_activated+=1; preferencecontainer.style.display='flex'; special_events_number+=1; special_events_counter.innerText = special_events_number; special_events_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Special')){all_destinations[i].score += 1;} }
+entertainmenttitle.style.display='flex';}
 else{special_events_counter.innerText = '0'; special_events_counter.style.visibility='hidden'; special_events_number=0;
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Special')){all_destinations[i].score -= 5;} }} })
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Special')){all_destinations[i].score -= 5;} }
+is_preference_activated-=5; if(is_preference_activated==0){preferencecontainer.style.display='none';}entertainmenttitle.style.display='none';} })
 
-natural_sig.addEventListener('click', ()=>{if(natural_sig_counter.innerText<5){natural_sig_number+=1; natural_sig_counter.innerText = natural_sig_number; natural_sig_counter.style.visibility='visible';
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Natural')){all_destinations[i].score += 1;} }}
+natural_sig.addEventListener('click', ()=>{if(natural_sig_counter.innerText<5){is_preference_activated+=1; preferencecontainer.style.display='flex'; natural_sig_number+=1; natural_sig_counter.innerText = natural_sig_number; natural_sig_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Natural')){all_destinations[i].score += 1;} }
+naturetitle.style.display='flex';}
 else{natural_sig_counter.innerText = '0'; natural_sig_counter.style.visibility='hidden'; natural_sig_number=0;
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Natural')){all_destinations[i].score -= 5;} }} })
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Natural')){all_destinations[i].score -= 5;} }
+is_preference_activated-=5; if(is_preference_activated==0){preferencecontainer.style.display='none';}naturetitle.style.display='none';} })
 
-arch_sig.addEventListener('click', ()=>{if(arch_sig_counter.innerText<5){arch_sig_number+=1; arch_sig_counter.innerText = arch_sig_number; arch_sig_counter.style.visibility='visible';
+arch_sig.addEventListener('click', ()=>{if(arch_sig_counter.innerText<5){is_preference_activated+=1; preferencecontainer.style.display='flex'; arch_sig_number+=1; arch_sig_counter.innerText = arch_sig_number; arch_sig_counter.style.visibility='visible';
 for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Architecture')){all_destinations[i].score += 1;} }}
 else{arch_sig_counter.innerText = '0'; arch_sig_counter.style.visibility='hidden'; arch_sig_number=0;
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Architecture')){all_destinations[i].score -= 5;} }} })
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Architecture')){all_destinations[i].score -= 5;} }
+is_preference_activated-=5; if(is_preference_activated==0){preferencecontainer.style.display='none';}} })
 //ATTRACTIONS ENDS HERE
 
 
@@ -82,6 +111,9 @@ const spiritual = document.getElementById('spiritualbutton'); let is_spiritual=f
 const libraries = document.getElementById('librariesbutton'); let is_libraries=false; 
 const festivals = document.getElementById('festivalsbutton'); let is_festivals=false; const pubss = document.getElementById('pubsbutton'); let is_pubs=false;
 const conventions = document.getElementById('conventionsbutton'); let is_conventions=false; const theme = document.getElementById('themebutton'); let is_theme=false;
+const seafood = document.getElementById('seafoodbutton'); let is_seafood=false; const signature = document.getElementById('signaturebutton');let is_signature=false;
+const beverages = document.getElementById('beveragesbutton'); let is_beverage=false; const dessert= document.getElementById('dessertsbutton'); let is_dessert=false;
+const street = document.getElementById('streetsbutton'); let is_street=false; const exotic = document.getElementById('exoticbutton'); let is_exotic = false;
 
 function forestfunction(){if(is_forest == true){is_forest=false; forests.style.borderColor='rgba(0,0,0,0)';
 for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Forests')){all_destinations[i].score += 3;} }} 
@@ -137,6 +169,30 @@ function themefunction(){if(is_theme == true){is_theme=false; theme.style.border
 for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Theme')){all_destinations[i].score += 3;} }} 
 else if(is_theme == false){is_theme=true; theme.style.borderStyle='solid'; theme.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Theme')){all_destinations[i].score -= 3;} }}; theme.style.borderWidth='0.198vh';}
 
+function seafoodfunction(){if(is_seafood == true){is_seafood=false; seafood.style.borderColor='rgba(0,0,0,0)'; 
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Seafood')){all_destinations[i].score += 3;} }} 
+else if(is_seafood == false){is_seafood=true; seafood.style.borderStyle='solid'; seafood.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Seafood')){all_destinations[i].score -= 3;} }}; seafood.style.borderWidth='0.198vh';}
+
+function dessertfunction(){if(is_dessert == true){is_dessert=false; dessert.style.borderColor='rgba(0,0,0,0)'; 
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Dessert')){all_destinations[i].score += 3;} }} 
+else if(is_dessert == false){is_dessert=true; dessert.style.borderStyle='solid'; dessert.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Dessert')){all_destinations[i].score -= 3;} }}; dessert.style.borderWidth='0.198vh';}
+
+function signaturefunction(){if(is_signature == true){is_signature=false; signature.style.borderColor='rgba(0,0,0,0)'; 
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Signature')){all_destinations[i].score += 3;} }} 
+else if(is_signature == false){is_signature=true; signature.style.borderStyle='solid'; signature.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Signature')){all_destinations[i].score -= 3;} }}; signature.style.borderWidth='0.198vh';}
+
+function beveragesfunction(){if(is_beverage == true){is_beverage=false; beverages.style.borderColor='rgba(0,0,0,0)'; 
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Beverage')){all_destinations[i].score += 3;} }} 
+else if(is_beverage == false){is_beverage=true; beverages.style.borderStyle='solid'; beverages.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Beverage')){all_destinations[i].score -= 3;} }}; beverages.style.borderWidth='0.198vh';}
+
+function streetfunction(){if(is_street == true){is_street=false; street.style.borderColor='rgba(0,0,0,0)'; 
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Street')){all_destinations[i].score += 3;} }} 
+else if(is_street == false){is_street=true; street.style.borderStyle='solid'; street.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Street')){all_destinations[i].score -= 3;} }}; street.style.borderWidth='0.198vh';}
+
+function exoticfunction(){if(is_exotic == true){is_exotic=false; exotic.style.borderColor='rgba(0,0,0,0)'; 
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Exotic')){all_destinations[i].score += 3;} }} 
+else if(is_exotic == false){is_exotic=true; exotic.style.borderStyle='solid'; exotic.style.borderColor='snow'; for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].preference.includes('Exotic')){all_destinations[i].score -= 3;} }}; exotic.style.borderWidth='0.198vh';}
+
 const natureelements = document.getElementById('natureelements');
 const naturetitle = document.getElementById('nature');
 let is_nature_clicked = false;
@@ -167,6 +223,17 @@ function entertainmentclick(){
 entertainmenttitle.addEventListener('mouseenter', ()=>{entertainmenttitle.style.backgroundColor='rgba(0,0,0,0.6)';})
 entertainmenttitle.addEventListener('mouseleave', ()=>{if(is_entertainment_clicked == false){entertainmenttitle.style.backgroundColor = 'rgba(0,0,0,0.0)';}})
 
+const cuisinetitle = document.getElementById('cuisine');
+const cuisineelements = document.getElementById('cuisineelements');
+let is_cuisine_clicked = false
+function cuisineclick(){
+    if (cuisineelements.style.display === "block") {cuisineelements.style.display = "none"; cuisinetitle.style.backgroundColor = 'rgba(0,0,0,0.0)'; is_cuisine_clicked=false;} 
+    else {cuisineelements.style.display = "block"; cuisinetitle.style.backgroundColor = 'rgba(0,0,0,0.6)'; cuisineelements.style.backgroundColor = 'rgba(0,0,0,0.6)'; is_cuisine_clicked=true;}
+}
+cuisinetitle.addEventListener('mouseenter', ()=>{cuisinetitle.style.backgroundColor='rgba(0,0,0,0.6)';})
+cuisinetitle.addEventListener('mouseleave', ()=>{if(is_cuisine_clicked == false){cuisinetitle.style.backgroundColor = 'rgba(0,0,0,0.0)';}})
+
+
 let all_preferences = [forests, parks, oceans, mountains, wilderness, ancient, museums, spiritual, art, libraries, festivals, pubss, conventions, theme];
 let all_preferences_bool = [is_forest, is_parks, is_oceans, is_mountains, is_wilderness, is_ancient, is_museums, is_spiritual, is_art, is_libraries, is_festivals, is_pubs, is_conventions, is_theme];
 let all_preference_titles = [natureelements, cultureelements, entertainmentelements];
@@ -189,6 +256,41 @@ for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].people == 'r
 else{respect_counter.innerText = '0'; respect_counter.style.visibility='hidden'; respect_number=0;
 for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].people == 'respectful'){all_destinations[i].score -= 5;} }} })
 //PEOPLE ENDS HERE
+
+//SAFETY SECTION
+const safetysliderreader = document.getElementById('newRange');
+const safety_display = document.getElementById('newslidernumber');
+
+safetysliderreader.oninput = function(){let new_temp_array = [];
+
+    if(safetysliderreader.value == 5){safety_display.innerText = 'Totally Safe';
+        for(let i=0; i<all_destinations.length; i++){
+            if(all_destinations[i].safety == 'safe'){
+                new_temp_array.push(all_destinations[i])}
+}}
+
+    if(safetysliderreader.value == 4){safety_display.innerText = 'Mostly Safe';
+        for(let i=0; i<all_destinations.length; i++){
+            if(all_destinations[i].safety == 'safe'){
+                new_temp_array.push(all_destinations[i])}
+}}
+
+    if(safetysliderreader.value == 3){safety_display.innerText = 'Usually Safe';
+        for(let i=0; i<all_destinations.length; i++){
+            if(all_destinations[i].safety == 'safe' || all_destinations[i].safety == 'medium'){
+                new_temp_array.push(all_destinations[i])}
+}}
+    if(safetysliderreader.value == 2){safety_display.innerText = 'Travelers Should Be Cautious';
+        for(let i=0; i<all_destinations.length; i++){
+            if(all_destinations[i].safety == 'safe' || all_destinations[i].safety == 'medium'){
+                new_temp_array.push(all_destinations[i])}
+}}
+    if(safetysliderreader.value == 1){safety_display.innerText = 'Travelers Must Be Extremely Cautious';
+        for(let i=0; i<all_destinations.length; i++){
+                new_temp_array.push(all_destinations[i])
+}}
+}
+//SAFETY ENDS HERE
 
 let deez;
 //ACTIVITIES SECTION 
