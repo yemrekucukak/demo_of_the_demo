@@ -56,9 +56,6 @@ for(let i=0; i<all_destinations.length; i++){
 }}}
 //BUDGET SECTION ENDS HERE
 
-const preferencecontainer = document.getElementById('preferences')
-let is_preference_activated = 0;
-
 //ATTRACTIONS SECTION
 const cuisine = document.getElementById('cu'); let cuisine_counter = document.getElementById('text_cu'); let cuisine_number=0;
 const culture = document.getElementById('cult'); let culture_counter = document.getElementById('text_cult'); let culture_number=0;
@@ -66,39 +63,30 @@ const special_events = document.getElementById('sp'); let special_events_counter
 const natural_sig = document.getElementById('na'); let natural_sig_counter = document.getElementById('text_na'); let natural_sig_number=0;
 const arch_sig = document.getElementById('as'); let arch_sig_counter = document.getElementById('text_as'); let arch_sig_number=0;
 
-cuisine.addEventListener('click', ()=>{if(cuisine_counter.innerText<5){is_preference_activated+=1; preferencecontainer.style.display='flex'; cuisine_number+=1; cuisine_counter.innerText = cuisine_number; cuisine_counter.style.visibility='visible'; 
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Cuisine')){all_destinations[i].score += 1;} } 
-cuisinetitle.style.display='flex';}
+cuisine.addEventListener('click', ()=>{if(cuisine_counter.innerText<5){cuisine_number+=1; cuisine_counter.innerText = cuisine_number; cuisine_counter.style.visibility='visible'; 
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Cuisine')){all_destinations[i].score += 1;} } }
 else{cuisine_counter.innerText = '0'; cuisine_counter.style.visibility='hidden'; cuisine_number=0;
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Cuisine')){all_destinations[i].score -= 5;} }
-is_preference_activated-=5; if(is_preference_activated==0){preferencecontainer.style.display='none';}cuisinetitle.style.display='none';} })
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Cuisine')){all_destinations[i].score -= 5;} }} })
 
-culture.addEventListener('click', ()=>{if(culture_counter.innerText<5){is_preference_activated+=1; preferencecontainer.style.display='flex'; culture_number+=1; culture_counter.innerText = culture_number; culture_counter.style.visibility='visible';
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Culture')){all_destinations[i].score += 1;} }
-culturetitle.style.display='flex';}
+culture.addEventListener('click', ()=>{if(culture_counter.innerText<5){culture_number+=1; culture_counter.innerText = culture_number; culture_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Culture')){all_destinations[i].score += 1;} }}
 else{culture_counter.innerText = '0'; culture_counter.style.visibility='hidden'; culture_number=0;
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Culture')){all_destinations[i].score -= 5;} }
-is_preference_activated-=5; if(is_preference_activated==0){preferencecontainer.style.display='none';}culturetitle.style.display='none';} })
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Culture')){all_destinations[i].score -= 5;} }} })
 
-special_events.addEventListener('click', ()=>{if(special_events_counter.innerText<5){is_preference_activated+=1; preferencecontainer.style.display='flex'; special_events_number+=1; special_events_counter.innerText = special_events_number; special_events_counter.style.visibility='visible';
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Special')){all_destinations[i].score += 1;} }
-entertainmenttitle.style.display='flex';}
+special_events.addEventListener('click', ()=>{if(special_events_counter.innerText<5){special_events_number+=1; special_events_counter.innerText = special_events_number; special_events_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Special')){all_destinations[i].score += 1;} }}
 else{special_events_counter.innerText = '0'; special_events_counter.style.visibility='hidden'; special_events_number=0;
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Special')){all_destinations[i].score -= 5;} }
-is_preference_activated-=5; if(is_preference_activated==0){preferencecontainer.style.display='none';}entertainmenttitle.style.display='none';} })
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Special')){all_destinations[i].score -= 5;} }} })
 
-natural_sig.addEventListener('click', ()=>{if(natural_sig_counter.innerText<5){is_preference_activated+=1; preferencecontainer.style.display='flex'; natural_sig_number+=1; natural_sig_counter.innerText = natural_sig_number; natural_sig_counter.style.visibility='visible';
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Natural')){all_destinations[i].score += 1;} }
-naturetitle.style.display='flex';}
+natural_sig.addEventListener('click', ()=>{if(natural_sig_counter.innerText<5){natural_sig_number+=1; natural_sig_counter.innerText = natural_sig_number; natural_sig_counter.style.visibility='visible';
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Natural')){all_destinations[i].score += 1;} }}
 else{natural_sig_counter.innerText = '0'; natural_sig_counter.style.visibility='hidden'; natural_sig_number=0;
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Natural')){all_destinations[i].score -= 5;} }
-is_preference_activated-=5; if(is_preference_activated==0){preferencecontainer.style.display='none';}naturetitle.style.display='none';} })
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Natural')){all_destinations[i].score -= 5;} }} })
 
-arch_sig.addEventListener('click', ()=>{if(arch_sig_counter.innerText<5){is_preference_activated+=1; preferencecontainer.style.display='flex'; arch_sig_number+=1; arch_sig_counter.innerText = arch_sig_number; arch_sig_counter.style.visibility='visible';
+arch_sig.addEventListener('click', ()=>{if(arch_sig_counter.innerText<5){arch_sig_number+=1; arch_sig_counter.innerText = arch_sig_number; arch_sig_counter.style.visibility='visible';
 for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Architecture')){all_destinations[i].score += 1;} }}
 else{arch_sig_counter.innerText = '0'; arch_sig_counter.style.visibility='hidden'; arch_sig_number=0;
-for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Architecture')){all_destinations[i].score -= 5;} }
-is_preference_activated-=5; if(is_preference_activated==0){preferencecontainer.style.display='none';}} })
+for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].attraction.includes('Architecture')){all_destinations[i].score -= 5;} }} })
 //ATTRACTIONS ENDS HERE
 
 
