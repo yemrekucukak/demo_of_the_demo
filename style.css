@@ -56,16 +56,17 @@ body{text-align: center; margin: 0; background-image: url('bgi1.jpg'); backgroun
     cursor: pointer; 
   }
   
-#preferences{display: none;  flex-direction: column; align-items: center; margin-bottom: 3vh; padding-left: 9vw; padding-right: 9vw;}
+#preferences{display: flex; flex-direction: column; align-items: center; margin-bottom: 3vh; padding-left: 9vw; padding-right: 9vw;}
 #dropdowns{display: flex; flex-direction: row; font-size: 1.72em; font-weight: bolder; color: whitesmoke; gap: 6vw;}
-.droptitle{display:none; margin-top: 1vh; font-size: 1.2em; padding-left:2vw; padding-right:2vw; padding-top: 1.2vh; padding-bottom: 1.2vh; transition: background-color .6s; border-style: solid; border-color: rgba(0,0,0,0);}
-.droptitle:hover{border-style: solid; border-color: whitesmoke; border-width: 0.108vw;}
-
 
 #natureelements{display:none; font-size: 0.9em;}   .dropclassnature{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
 #cultureelements{display:none; font-size: 0.9em;}  .dropclassculture{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
 #entertainmentelements{display:none; font-size: 0.9em;} .dropclassentertainment{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
 #cuisineelements{display:none; font-size: 0.9em;} .dropclasscuisine{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
+
+
+.droptitle{margin-top: 1vh; font-size: 1.2em; padding-left:2vw; padding-right:2vw; padding-top: 1.2vh; padding-bottom: 1.2vh; transition: background-color .6s; border-style: solid; border-color: rgba(0,0,0,0);}
+.droptitle:hover{border-style: solid; border-color: whitesmoke; border-width: 0.108vw;}
 
 
 #activities_container{display: flex; flex-direction: column; align-items: center;}
