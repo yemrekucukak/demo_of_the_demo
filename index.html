@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <title>Demo of the Demo version2</title>
+    <title>Demo of the Demo version3</title>
 </head>
 
 <body id="bud">
@@ -17,7 +17,8 @@
 
  <div id="all_questions">
 
-    <div id="budget_container" class="main_question">   <div id="budget" class="q">Budget <div class="explanations">Budget is generally the most important factor that travelers consider. Please select a budget for daily expenses on the slider.</div></div>   <div class="slidecontainer"> <input type="range" min="50" max="500" value="120" class="slider" id="myRange"> <div id="slider_value">Average Daily Budget: <div id="slidernumber">120$</div></div></div>   </div>
+    <div id="budget_container" class="main_question">   <div id="budget" class="q">Budget <div class="explanations">Budget is generally the most important factor that travelers consider. Please select a budget for daily expenses on the slider.</div></div>   
+    <div class="slidecontainer"> <input type="range" min="50" max="500" value="120" class="slider" id="myRange"> <div id="slider_value">Average Daily Budget: <div id="slidernumber">120$</div></div></div>   </div>
     
    
   <div id="attraction" class="main_question">   <div id="safety" class="q">Attractions <div class="explanations">What makes a country attractive in your opinion? Delicious dishes prepared according to profound cultures around the world or their heritage and culture? What about special events that happen only in one country or even in one city? Some places are blessed by mother nature, does this sound attractive to you? Or you may want to observe the beauty of architecture around the world? By clicking multiple times on the buttons you can increase the importantance of your choice. </div> </div>     <div class="test_options"> 
@@ -31,8 +32,32 @@
   </div>      </div> 
 
 
-    <div id="preferences" class="main_question">  <div id="type" class="q">Travel Preference <div class="explanations">What kind of a trip you would prefer? What fascinates you about the nature the most? What makes you curious about different cultures? Which places give you the most fun? You can specify your preference by choosing from dropdown menus.</div> </div>       <div id="dropdowns"> 
+    <div id="preferences" class="main_question">  <div id="type" class="q">Attractions (Advanced)<div class="explanations">What kind of a trip you would prefer? What fascinates you about the nature the most? What makes you curious about different cultures? Which places give you the most fun? You can specify your preference by choosing from dropdown menus.</div> </div>       <div id="dropdowns"> 
         
+      <div> <div id="cuisine" class="droptitle" onclick="cuisineclick()">Cuisine</div> 
+        <div id="cuisineelements"> <div class="dropclasscuisine" id="seafoodbutton" onclick="seafoodfunction()">Seafood</div> 
+        <div class="dropclasscuisine" id="signaturebutton"  onclick="signaturefunction()">Signature Dishes</div> 
+        <div class="dropclasscuisine" id="dessertsbutton"  onclick="dessertfunction()">Desserts</div>  
+        <div class="dropclasscuisine" id="beveragesbutton"  onclick="beveragesfunction()">Beverages</div>  
+        <div class="dropclasscuisine" id="streetsbutton"  onclick="streetfunction()">Street Foods</div>  
+        <div class="dropclasscuisine" id="exoticbutton"  onclick="exoticfunction()">Exotic Foods</div> 
+      </div>   </div>   
+
+      <div> <div id="culture" class="droptitle" onclick="cultureclick()">Culture</div>  
+      <div id="cultureelements"> <div class="dropclassculture" id="ancientbutton"  onclick="ancientfunction()">Ancient Cities</div> 
+      <div class="dropclassculture" id="museumsbutton"  onclick="museumfunction()">Museums</div>  
+      <div class="dropclassculture" id="librariesbutton"  onclick="librariesfunction()">Libraries</div> 
+      <div class="dropclassculture" id="spiritualbutton"  onclick="spirituelfunction()">Spiritual Places</div>  
+      <div class="dropclassculture" id="artbutton"  onclick="artfunction()">Art</div> 
+     </div>   </div> 
+
+     <div> <div id="entertainment" class="droptitle" onclick="entertainmentclick()">Entertainment</div>  
+        <div id="entertainmentelements"><div class="dropclassentertainment" id="festivalsbutton" onclick="festivalfunction()">Festivals</div> 
+        <div class="dropclassentertainment" id="conventionsbutton" onclick="conventionfunction()">Conventions</div> 
+        <div class="dropclassentertainment" id="pubsbutton" onclick="pubfunction()">Clubs&Pubs&Cafes</div> 
+        <div class="dropclassentertainment" id="themebutton" onclick="themefunction()">Theme Parks</div>  
+      </div>   </div>  
+
       <div> <div id="nature" class="droptitle" onclick="natureclick()">Nature</div> 
         <div id="natureelements"> <div class="dropclassnature" id="forestsbutton" onclick="forestfunction()">Forests</div> 
         <div class="dropclassnature" id="mountainsbutton"  onclick="mountainfunction()">Mountains</div> 
@@ -40,53 +65,58 @@
         <div class="dropclassnature" id="parksbutton"  onclick="parksfunction()">Parks</div>  
         <div class="dropclassnature" id="wildernessbutton"  onclick="wildernessfunction()">Wildernesses</div>  
       </div>   </div>        
-        <div> <div id="culture" class="droptitle" onclick="cultureclick()">Culture</div>  
-        <div id="cultureelements"> <div class="dropclassculture" id="ancientbutton"  onclick="ancientfunction()">Ancient Cities</div> 
-        <div class="dropclassculture" id="museumsbutton"  onclick="museumfunction()">Museums</div>  
-        <div class="dropclassculture" id="librariesbutton"  onclick="librariesfunction()">Libraries</div> 
-        <div class="dropclassculture" id="spiritualbutton"  onclick="spirituelfunction()">Spiritual Places</div>  
-        <div class="dropclassculture" id="artbutton"  onclick="artfunction()">Art</div> 
-       </div>   </div>        
-        <div> <div id="entertainment" class="droptitle" onclick="entertainmentclick()">Entertainment</div>  
-        <div id="entertainmentelements"><div class="dropclassentertainment" id="festivalsbutton" onclick="festivalfunction()">Festivals</div> 
-        <div class="dropclassentertainment" id="conventionsbutton" onclick="conventionfunction()">Conventions</div> 
-        <div class="dropclassentertainment" id="pubsbutton" onclick="pubfunction()">Clubs&Pubs&Cafes</div> 
-         <div class="dropclassentertainment" id="themebutton" onclick="themefunction()">Theme Parks</div>  
-         </div>   </div>    
+              
+          
       </div>     </div>    
+
     
+      <div id="allpeople">
 
     <div id="people_container" class="main_question">        <div id="people" class="q">People <div class="explanations">Some travelers prefer local people to be respectful to personal space; others prefer them to be sincere and welcoming. By clicking multiple times on the buttons you can increase the importantance of your choice.</div></div>     
-     <div class="test_options"> <div class="parentsforbuttons"><button id="sin">Sincere</button><p class="click_text" id="text_sin">0</p></div> 
-     <div class="parentsforbuttons"><button id="respect">Respectful to Personal Space</button><p class="click_text" id="text_respect">0</p></div> </div>      </div>
+     <div class="test_options"> 
+      <div class="parentsforbuttons" id="peoplebuttons"><button id="sin">Sincere</button><p class="click_text" id="text_sin">0</p></div> 
+     <div class="parentsforbuttons" id="peoplebuttons"><button id="respect">Respectful to Personal Space</button><p class="click_text" id="text_respect">0</p></div> 
+    </div>     
+     </div>
+
+     <div id="safety_container" class="main_question">        <div id="safety" class="q">Safety <div class="explanations">How important safety is for you? Especially for alone travelers and couples safe destinations are prefered. Increasing the safety may decrease the number of suggestions. In all cases idividuals should take personal measures. <div id="warning">(This section is prepared according to crime rates.)</div></div></div>     
+  
+     <div class="newslidecontainer"> <input type="range" min="1" max="5" value="3" class="newslider" id="newRange"> <div id="new_slider_value">Safety: <div id="newslidernumber">Usually Safe</div></div></div>   </div>
+    
+
+    </div>
+
+      </div>
 
 
     <div id="activities_container" class="main_question"> <div id="activities" class="q">Activities <div class="explanations">Which activities you'd like to try on your travel? You can choose multiple activities below. </div></div> 
     <div id="selection_items1">
       <div class="selection" id="hiking">Hiking</div> 
       <div class="selection" id="climbing">Climbing</div> 
-      <div class="selection" id="parachuting">Parachuting</div> 
-      <div class="selection" id="scuba">Scuba-diving</div>   
-      <div class="selection" id="surfing">Surfing</div>  
-      <div class="selection" id="balloon">Hot Air Ballooning</div>       
+      <div class="selection" id="camping">Camping</div> 
+      <div class="selection" id="star">Star Gazing</div>  
+      <div class="selection" id="horse">Horse Riding</div> 
+      <div class="selection" id="sightseeing">Sightseeing</div>  
+      <div class="selection" id="cycling">Cycling</div>       
      </div>
     <div id="selection_items2">
-        <div class="selection" id="horse">Horse Riding</div>
+        <div class="selection" id="rafting">Rafting</div> 
+        <div class="selection" id="surfing">Surfing</div> 
+        <div class="selection" id="kayaking">Kayaking</div>  
+        <div class="selection" id="cruise">Cruise</div>  
+        <div class="selection" id="scuba">Scuba-diving</div> 
         <div class="selection" id="skiing">Skiing</div> 
-        <div class="selection" id="camping">Camping</div> 
-        <div class="selection" id="star">Star Gazing</div> 
-        <div class="selection" id="cycling">Cycling</div>  
-        <div class="selection" id="bird">Bird Gazing</div>   
-        <div class="selection" id="staycation">Staycation</div>      
+        <div class="selection">Seven</div>  
+            
       </div>
     <div id="selection_items3">
-        <div class="selection" id="sightseeing">Sightseeing</div> 
+        <div class="selection" id="bird">Bird Gazing</div>   
+        <div class="selection" id="staycation">Staycation</div>  
+        <div class="selection" id="parachuting">Parachuting</div> 
+        <div class="selection" id="balloon">Hot Air Ballooning</div> 
         <div class="selection" id="chilling">Chilling</div> 
-        <div class="selection" id="rafting">Rafting</div> 
         <div class="selection" id="shopping">Shopping</div> 
-        <div class="selection" id="kayaking">Kayaking</div>  
-        <div class="selection" id="cruise">Cruise</div>   
-        <div class="selection">Seven</div>     
+           
        </div>
     </div> 
     
