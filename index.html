@@ -8,8 +8,10 @@
 
 <body id="bud">
 
+  
    <div id="nav_container"> <div id="nav_bar"> <div class="nav_element">Home</div>    <div class="nav_element">Travel</div>  <div class="nav_element">Sport</div>  <div class="nav_element">Movies</div>   <div class="nav_element">Food</div>  <div class="nav_element">Shows</div>   </div> </div>
 
+   <div id="main">
 
     <div id="questions">
 
@@ -18,7 +20,7 @@
  <div id="all_questions">
 
     <div id="budget_container" class="main_question">   <div id="budget" class="q">Budget <div class="explanations">Budget is generally the most important factor that travelers consider. Please select a budget for daily expenses on the slider.</div></div>   
-    <div class="slidecontainer"> <input type="range" min="50" max="500" value="120" class="slider" id="myRange"> <div id="slider_value">Average Daily Budget: <div id="slidernumber">120$</div></div></div>   </div>
+    <div class="slidecontainer"> <input type="range" min="50" max="500" value="240" class="slider" id="myRange"> <div id="slider_value">Average Daily Budget: <div id="slidernumber">240$</div></div></div>   </div>
     
    
   <div id="attraction" class="main_question">   <div id="safety" class="q">Attractions <div class="explanations">What makes a country attractive in your opinion? Delicious dishes prepared according to profound cultures around the world or their heritage and culture? What about special events that happen only in one country or even in one city? Some places are blessed by mother nature, does this sound attractive to you? Or you may want to observe the beauty of architecture around the world? By clicking multiple times on the buttons you can increase the importantance of your choice. </div> </div>     <div class="test_options"> 
@@ -145,16 +147,36 @@
     
 </div>      </div>
    
-
+<button type="button" id="submit">Submit</button>
  </div>
 
- <div id="output">
- <button type="button" id="submit">Submit</button>
- <div id="result">Here are our Suggestions: <ul id="ordered_list"> </ul></div>
-</div>
+ 
+
 
 </div>
 
+<div id="ultimateresult">
+  <div id="resulttitle">Here Are Our Suggestions:</div>
+
+  <div id="firstrow" class="resultrows">
+    <div id="firstsuggestion" class="eachresult">One</div>
+    <div id="secondsuggestion" class="eachresult">Two</div>
+    <div id="thirdsuggestion" class="eachresult">Three</div>
+  </div>
+
+  <div id="secondrow" class="resultrows">
+    <div id="fourthsuggestion" class="eachresult">Fourth</div>
+    <div id="fifthsuggestion" class="eachresult">Fifth</div>
+    <div id="sixthsuggestion" class="eachresult">Six</div>
+  </div>
+
+  <div id="thirdrow" class="resultrows">
+    <div id="seventhsuggestion" class="eachresult">Seven</div>
+    <div id="eigthsuggestion" class="eachresult">Eight</div>
+    <div id="ninethsuggestion" class="eachresult">Nine</div>
+  </div>
+  <button type="button" id="reset">Reset</button>
+</div>
 
 
 
