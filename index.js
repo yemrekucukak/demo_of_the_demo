@@ -1,38 +1,42 @@
+const body = document.getElementById('bud');
+const background_image_list = ["url('background_images/bgi6.jpg')", "url('background_images/bgi5.jpg')", "url('background_images/bgi7.jpg')", "url('background_images/bgi4.jpg')", "url('background_images/bgi3.jpg')", "url('background_images/bgi2.jpg')", "url('background_images/bgi1.jpg')"]
+image_index = Math.floor(Math.random()*6);
+body.style.backgroundImage = background_image_list[image_index];
 
-let Manchester = {name:'Manchester', country:'United Kingdom', score:0, cost:150, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['cycling', 'sightseeing'], safety:'safe', preference:['Culture', 'Pubs', 'Museums', 'Libraries' ] };
-let London = {name:'London', country:'United Kingdom', score:0, cost:240, people:'respectful', climate:'continental', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'shopping', 'cruise'], safety:'medium', preference:['Culture', 'Museums', 'Pubs', 'Art', 'Museums' ] };
-let Edinburgh = {name:'Edinburgh', country:'United Kingdom', score:0, cost:180, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture', 'Special Events'], activities:['sightseeing', 'hiking', 'cycling'], safety:'medium', preference:['Culture', 'Museums', 'Oceans','Art','Festivals', 'Museums', 'Libraries', 'Parks'] };
-let Cardiff  = {name:'Cardiff', country:'United Kingdom', score:0, cost:130, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'rafting'], safety:'medium', preference:['Culture', 'Museums', 'Oceans', 'Parks'] };
-let Birmingham = {name:'Birmingham', country:'United Kingdom', score:0, cost:110, people:'respectful', climate:'oceanic', attraction:[], activities:['chilling'], safety:'safe', preference:['Pubs', 'Parks'] };
-let Glasgow = {name:'Glasgow', country:'United Kingdom', score:0, cost:160, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'hiking', 'cycling', 'cruise'], safety:'safe', preference:['Culture', 'Museums', 'Art','Pubs', 'Festivals' ] };
-let Liverpool = {name:'Liverpool', country:'United Kingdom', score:0, cost:160, people:'sincere', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'shopping'], safety:'safe', preference:['Culture', 'Art', 'Museums', 'Ocean', 'Pubs'] };
-let Oxford = {name:'Oxford', country:'United Kingdom', score:0, cost:160, people:'respectful', climate:'continental', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'kayaking', 'chilling'], safety:'safe', preference:['Culture', 'Museums', 'Art', 'Libraries'] };
-let Bristol = {name:'Bristol', country:'United Kingdom', score:0, cost:160, people:'respectful', climate:'oceanic', attraction:['Architecture'], activities:['sightseeing', 'cycling', 'cruise', 'ballooning'], safety:'dangerous', preference:['Art', 'Festivals'] };
-let Cambridge = {name:'Cambridge', country:'United Kingdom', score:0, cost:190, people:'respectful', climate:'continental', attraction:['Culture', 'Architecture', 'Cuisine'], activities:['sightseeing','cruise', 'cycling'], safety:'medium', preference:['Libraries', 'Museums'] };
-let Brighton = {name:'Brighton', country:'United Kingdom', score:0, cost:150, people:'respectful', climate:'oceanic', attraction:['Cuisine', 'Architecture'], activities:['sightseeing', 'cycling'], safety:'safe', preference:['Oceans', 'Festivals', 'Parks'] };
+let Manchester = {name:'Manchester', country:'United Kingdom', score:0, cost:150, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['cycling', 'sightseeing'], safety:'safe', preference:['Culture', 'Pubs', 'Museums', 'Libraries' ], photo:"url(city_images/Manchester.jpg)"};
+let London = {name:'London', country:'United Kingdom', score:0, cost:240, people:'respectful', climate:'continental', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'shopping', 'cruise'], safety:'medium', preference:['Culture', 'Museums', 'Pubs', 'Art', 'Museums' ], photo:"url(city_images/London.jpg)" };
+let Edinburgh = {name:'Edinburgh', country:'United Kingdom', score:0, cost:180, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture', 'Special Events'], activities:['sightseeing', 'hiking', 'cycling'], safety:'medium', preference:['Culture', 'Museums', 'Oceans','Art','Festivals', 'Museums', 'Libraries', 'Parks'], photo:"url(city_images/Edinburgh.jpg)" };
+let Cardiff  = {name:'Cardiff', country:'United Kingdom', score:0, cost:130, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'rafting'], safety:'medium', preference:['Culture', 'Museums', 'Oceans', 'Parks'], photo:"url(city_images/Cardiff.jpg)" };
+let Birmingham = {name:'Birmingham', country:'United Kingdom', score:0, cost:110, people:'respectful', climate:'oceanic', attraction:[], activities:['chilling'], safety:'safe', preference:['Pubs', 'Parks'], photo:"url(city_images/Birmingham.jpg)" };
+let Glasgow = {name:'Glasgow', country:'United Kingdom', score:0, cost:160, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'hiking', 'cycling', 'cruise'], safety:'safe', preference:['Culture', 'Museums', 'Art','Pubs', 'Festivals' ], photo:"url(city_images/Glasgow.jpg)" };
+let Liverpool = {name:'Liverpool', country:'United Kingdom', score:0, cost:160, people:'sincere', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'shopping'], safety:'safe', preference:['Culture', 'Art', 'Museums', 'Ocean', 'Pubs'] , photo:"url(city_images/Liverpool.jpg)"};
+let Oxford = {name:'Oxford', country:'United Kingdom', score:0, cost:160, people:'respectful', climate:'continental', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'kayaking', 'chilling'], safety:'safe', preference:['Culture', 'Museums', 'Art', 'Libraries'], photo:"url(city_images/Oxford.jpg)" };
+let Bristol = {name:'Bristol', country:'United Kingdom', score:0, cost:160, people:'respectful', climate:'oceanic', attraction:['Architecture'], activities:['sightseeing', 'cycling', 'cruise', 'ballooning'], safety:'dangerous', preference:['Art', 'Festivals'] , photo:"url(city_images/Bristol.jpg)"};
+let Cambridge = {name:'Cambridge', country:'United Kingdom', score:0, cost:190, people:'respectful', climate:'continental', attraction:['Culture', 'Architecture', 'Cuisine'], activities:['sightseeing','cruise', 'cycling'], safety:'medium', preference:['Libraries', 'Museums'], photo:"url(city_images/Cambridge.jpg)" };
+let Brighton = {name:'Brighton', country:'United Kingdom', score:0, cost:150, people:'respectful', climate:'oceanic', attraction:['Cuisine', 'Architecture'], activities:['sightseeing', 'cycling'], safety:'safe', preference:['Oceans', 'Festivals', 'Parks'] , photo:"url(city_images/Brighton.jpg)"};
 
-let Berlin = {name:'Berlin', country:'Germany', score:0, cost:140, people:'respectful', climate:'continental', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Culture', 'Museums', 'Parks'] };
-let Munich = {name:'Munich', country:'Germany', score:0, cost:190, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'cycling', 'shopping'], safety:'safe', preference:['Culture', 'Parks', 'Art'] };
-let Frankfurt = {name:'Frankfurt', country:'Germany', score:0, cost:120, people:'respectful', climate:'oceanic', attraction:['Culture', 'Cuisine'], activities:['sightseeing', 'shopping'], safety:'safe', preference:['Museums', 'Parks', 'Forests'] };
-let Hamburg = {name:'Hamburg', country:'Germany', score:0, cost:140, people:'respectful', climate:'oceanic', attraction:['Culture', 'Cuisine', 'Special'], activities:['sightseeing', 'shopping', 'kayaking'], safety:'safe', preference:['Oceans', 'Festivals'] };
-let Dresden = {name:'Dresden', country:'Germany', score:0, cost:120, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'kayaking'], safety:'safe', preference:['Culture', 'Parks'] };
-let Leipzig = {name:'Leipzig', country:'Germany', score:0, cost:130, people:'respectful', climate:'oceanic', attraction:['Culture'], activities:['sightseeing', 'kayaking', 'shopping'], safety:'safe', preference:['Culture', 'Museums'] };
-let Heidelberg = {name:'Heidelberg', country:'Germany', score:0, cost:150, people:'respectful', climate:'oceanic', attraction:['Culture', 'Natural'], activities:['sightseeing', 'chilling', 'kayaking'], safety:'safe', preference:['Culture', 'Forests'] };
-let Stuttgart = {name:'Stuttgart', country:'Germany', score:0, cost:130, people:'respectful', climate:'continental', attraction:['Culture'], activities:['sightseeing'], safety:'safe', preference:['Culture', 'Museums', 'Art', 'Libraries'] };
-let Koln = {name:'Köln', country:'Germany', score:0, cost:130, people:'respectful', climate:'oceanic', attraction:['Architecture'], activities:['sightseeing', 'shopping'], safety:'safe', preference:['Culture', 'Spiritual places'] };
+let Berlin = {name:'Berlin', country:'Germany', score:0, cost:140, people:'respectful', climate:'continental', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Culture', 'Museums', 'Parks'] , photo:"url(city_images/Berlin.jpg)"};
+let Munich = {name:'Munich', country:'Germany', score:0, cost:190, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'cycling', 'shopping'], safety:'safe', preference:['Culture', 'Parks', 'Art'] , photo:"url(city_images/Munich.jpg)"};
+let Frankfurt = {name:'Frankfurt', country:'Germany', score:0, cost:120, people:'respectful', climate:'oceanic', attraction:['Culture', 'Cuisine'], activities:['sightseeing', 'shopping'], safety:'safe', preference:['Museums', 'Parks', 'Forests'], photo:"url(city_images/Frankfurt.jpg)" };
+let Hamburg = {name:'Hamburg', country:'Germany', score:0, cost:140, people:'respectful', climate:'oceanic', attraction:['Culture', 'Cuisine', 'Special'], activities:['sightseeing', 'shopping', 'kayaking'], safety:'safe', preference:['Oceans', 'Festivals'], photo:"url(city_images/Hamburg.jpg)" };
+let Dresden = {name:'Dresden', country:'Germany', score:0, cost:120, people:'respectful', climate:'oceanic', attraction:['Culture', 'Architecture'], activities:['sightseeing', 'kayaking'], safety:'safe', preference:['Culture', 'Parks'], photo:"url(city_images/Dresden.jpg)" };
+let Leipzig = {name:'Leipzig', country:'Germany', score:0, cost:130, people:'respectful', climate:'oceanic', attraction:['Culture'], activities:['sightseeing', 'kayaking', 'shopping'], safety:'safe', preference:['Culture', 'Museums'], photo:"url(city_images/Leipzig.jpg)" };
+let Heidelberg = {name:'Heidelberg', country:'Germany', score:0, cost:150, people:'respectful', climate:'oceanic', attraction:['Culture', 'Natural'], activities:['sightseeing', 'chilling', 'kayaking'], safety:'safe', preference:['Culture', 'Forests'], photo:"url(city_images/Heidelberg.jpg)" };
+let Stuttgart = {name:'Stuttgart', country:'Germany', score:0, cost:130, people:'respectful', climate:'continental', attraction:['Culture'], activities:['sightseeing'], safety:'safe', preference:['Culture', 'Museums', 'Art', 'Libraries'], photo:"url(city_images/Stuttgart.jpg)" };
+let Koln = {name:'Köln', country:'Germany', score:0, cost:130, people:'respectful', climate:'oceanic', attraction:['Architecture'], activities:['sightseeing', 'shopping'], safety:'safe', preference:['Culture', 'Spiritual places'], photo:"url(city_images/Koln.jpg)" };
 
-let Rome = {name:'Rome', country:'Italy', score:0, cost:140, people:'sincere', climate:'mediterranean', attraction:['Culture', 'Cuisine', 'Special', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling' ], safety:'safe', preference:['Museums', 'Libraries', 'Ancient', 'Art', 'Pubs', 'Oceans', 'Festivals'] };
-let Venice = {name:'Venice', country:'Italy', score:0, cost:150, people:'sincere', climate:'oceanic', attraction:['Culture', 'Cuisine', 'Special', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Museums', 'Libraries', 'Art', 'Oceans', 'Festivals'] };
-let Florence = {name:'Florence', country:'Italy', score:0, cost:130, people:'sincere', climate:'mediterranean', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Museums', 'Art', 'Parks', ] };
-let Milano = {name:'Milano', country:'Italy', score:0, cost:130, people:'sincere', climate:'continental', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Museums', 'Art'] };
-let Napoli = {name:'Napoli', country:'Italy', score:0, cost:120, people:'sincere', climate:'mediterranean', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Museums', 'Oceans', 'Mountains', 'Ancient', 'Parks'] };
+let Rome = {name:'Rome', country:'Italy', score:0, cost:140, people:'sincere', climate:'mediterranean', attraction:['Culture', 'Cuisine', 'Special', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling' ], safety:'safe', preference:['Museums', 'Libraries', 'Ancient', 'Art', 'Pubs', 'Oceans', 'Festivals'], photo:"url(city_images/Rome.jpg)" };
+let Venice = {name:'Venice', country:'Italy', score:0, cost:150, people:'sincere', climate:'oceanic', attraction:['Culture', 'Cuisine', 'Special', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Museums', 'Libraries', 'Art', 'Oceans', 'Festivals'] , photo:"url(city_images/Venice.jpg)"};
+let Florence = {name:'Florence', country:'Italy', score:0, cost:130, people:'sincere', climate:'mediterranean', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Museums', 'Art', 'Parks', ] , photo:"url(city_images/Florence.jpg)"};
+let Milano = {name:'Milano', country:'Italy', score:0, cost:130, people:'sincere', climate:'continental', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Museums', 'Art'], photo:"url(city_images/Milano.jpg)" };
+let Napoli = {name:'Napoli', country:'Italy', score:0, cost:120, people:'sincere', climate:'mediterranean', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Museums', 'Oceans', 'Mountains', 'Ancient', 'Parks'], photo:"url(city_images/Napoli.jpg)" };
 
-let Tokyo = {name:'Tokyo', country:'Japan', score:0, cost:150, people:'respectful', climate:'monsoon', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Oceans', 'Parks', 'Museums', 'Ancient', 'Pubs', 'Art', 'Festivals', 'Theme'] };
-let Osaka = {name:'Osaka', country:'Japan', score:0, cost:70, people:'respectful', climate:'continental', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Oceans', 'Museums', 'Art', 'Theme', 'Pubs', 'Festivals', 'Spiritual' ] };
-let Okinawa = {name:'Okinawa', country:'Japan', score:0, cost:160, people:'respectful', climate:'monsoon', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling', 'scuba', 'surfing', 'staycation', 'cruise'], safety:'safe', preference:['Oceans', 'Mountains','Pubs' ] };
-let Kyoto = {name:'Kyoto', country:'Japan', score:0, cost:150, people:'respectful', climate:'dry', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling', 'hiking', 'staycation'], safety:'safe', preference:['Oceans', 'Parks', 'Forests', 'Spiritual', 'Museums', 'Mountains', 'Art' ] };
-let Nara= {name:'Nara', country:'Japan', score:0, cost:130, people:'respectful', climate:'monsoon', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Parks', 'Museums', 'Mountains', 'Spiritual'] };
-let Sapporo= {name:'Sapporo', country:'Japan', score:0, cost:110, people:'respectful', climate:'arctic', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling', 'skiing', 'hiking', 'climbing'], safety:'safe', preference:['Mountains', 'Forests', 'Parks', 'Festivals'] };
+let Tokyo = {name:'Tokyo', country:'Japan', score:0, cost:150, people:'respectful', climate:'monsoon', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Oceans', 'Parks', 'Museums', 'Ancient', 'Pubs', 'Art', 'Festivals', 'Theme'] , photo:"url(city_images/Tokyo.jpg)"};
+let Osaka = {name:'Osaka', country:'Japan', score:0, cost:70, people:'respectful', climate:'continental', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Oceans', 'Museums', 'Art', 'Theme', 'Pubs', 'Festivals', 'Spiritual' ] , photo:"url(city_images/Osaka.jpg)"};
+let Okinawa = {name:'Okinawa', country:'Japan', score:0, cost:160, people:'respectful', climate:'monsoon', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling', 'scuba', 'surfing', 'staycation', 'cruise'], safety:'safe', preference:['Oceans', 'Mountains','Pubs' ] , photo:"url(city_images/Okinawa.jpg)"};
+let Kyoto = {name:'Kyoto', country:'Japan', score:0, cost:150, people:'respectful', climate:'dry', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling', 'hiking', 'staycation'], safety:'safe', preference:['Oceans', 'Parks', 'Forests', 'Spiritual', 'Museums', 'Mountains', 'Art' ], photo:"url(city_images/Kyoto.jpg)" };
+let Nara= {name:'Nara', country:'Japan', score:0, cost:130, people:'respectful', climate:'monsoon', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling'], safety:'safe', preference:['Parks', 'Museums', 'Mountains', 'Spiritual'], photo:"url(city_images/Nara.jpg)" };
+let Sapporo= {name:'Sapporo', country:'Japan', score:0, cost:110, people:'respectful', climate:'arctic', attraction:['Culture', 'Cuisine', 'Special', 'Natural', 'Architecture'], activities:['sightseeing', 'shopping', 'cycling', 'skiing', 'hiking', 'climbing'], safety:'safe', preference:['Mountains', 'Forests', 'Parks', 'Festivals'], photo:"url(city_images/Sapporo.jpg)" };
 
 
 
@@ -41,9 +45,7 @@ Berlin, Munich, Frankfurt, Hamburg, Dresden, Leipzig, Heidelberg, Stuttgart, Kol
 Rome, Venice, Florence, Milano, Napoli,
 Tokyo, Osaka, Okinawa, Kyoto, Nara, Sapporo]
 
-const body = document.getElementById('bud');
-const background_image_list = ["url('bgi6.jpg')", "url('bgi5.jpg')", "url('bgi7.jpg')", "url('bgi4.jpg')", "url('bgi3.jpg')", "url('bgi2.jpg')", "url('bgi1.jpg')"]
-let temp_array = [];
+let temp_array = all_destinations;
 
 //BUDGET SECTION
 const sliderreader = document.getElementById('myRange');
@@ -222,11 +224,11 @@ cuisinetitle.addEventListener('mouseenter', ()=>{cuisinetitle.style.backgroundCo
 cuisinetitle.addEventListener('mouseleave', ()=>{if(is_cuisine_clicked == false){cuisinetitle.style.backgroundColor = 'rgba(0,0,0,0.0)';}})
 
 
-let all_preferences = [forests, parks, oceans, mountains, wilderness, ancient, museums, spiritual, art, libraries, festivals, pubss, conventions, theme];
-let all_preferences_bool = [is_forest, is_parks, is_oceans, is_mountains, is_wilderness, is_ancient, is_museums, is_spiritual, is_art, is_libraries, is_festivals, is_pubs, is_conventions, is_theme];
-let all_preference_titles = [natureelements, cultureelements, entertainmentelements];
-let all_preference_titles_bool = [is_nature_clicked, is_culture_clicked, is_entertainment_clicked];
-let real_titles = [naturetitle, culturetitle, entertainmenttitle];
+let all_preferences = [forests, parks, oceans, mountains, wilderness, ancient, museums, spiritual, art, libraries, festivals, pubss, conventions, theme, seafood, street, beverages, dessert, signature, exotic];
+let all_preferences_bool = [is_forest, is_parks, is_oceans, is_mountains, is_wilderness, is_ancient, is_museums, is_spiritual, is_art, is_libraries, is_festivals, is_pubs, is_conventions, is_theme, is_seafood, is_street, is_beverage, is_dessert, is_signature, is_exotic];
+let all_preference_titles = [natureelements, cultureelements, entertainmentelements, cuisineelements];
+let all_preference_titles_bool = [is_nature_clicked, is_culture_clicked, is_entertainment_clicked, is_cuisine_clicked];
+let real_titles = [naturetitle, culturetitle, entertainmenttitle, cuisinetitle];
 //TRAVEL PREFERENCE ENDS HERE
 
 
@@ -248,8 +250,8 @@ for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].people == 'r
 //SAFETY SECTION
 const safetysliderreader = document.getElementById('newRange');
 const safety_display = document.getElementById('newslidernumber');
-
-safetysliderreader.oninput = function(){let new_temp_array = [];
+let new_temp_array = all_destinations;
+safetysliderreader.oninput = function(){new_temp_array = [];
 
     if(safetysliderreader.value == 5){safety_display.innerText = 'Totally Safe';
         for(let i=0; i<all_destinations.length; i++){
@@ -448,23 +450,46 @@ for(let i=0; i<all_destinations.length; i++){if(all_destinations[i].climate == '
 let all_counters = [cuisine_counter, culture_counter, special_events_counter, natural_sig_counter, arch_sig_counter, sincere_counter, respect_counter, equa_counter, arctic_counter, monsoon_counter, dry_counter, mediter_counter, maritime_counter, continental_counter];
 let resulting_array = [];
 let suggestions = [];
-let resulting_element = document.getElementById('result');
-let suggestion_list = document.getElementById('ordered_list');
-let each_element = "";
+
+const first_suggestion = document.getElementById('firstsuggestion');
+const second_suggestion = document.getElementById('secondsuggestion');
+const third_suggestion = document.getElementById('thirdsuggestion');
+const fourth_suggestion = document.getElementById('fourthsuggestion');
+const fifth_suggestion = document.getElementById('fifthsuggestion');
+const sixth_suggestion = document.getElementById('sixthsuggestion');
+const seventh_suggestion = document.getElementById('seventhsuggestion');
+const eigth_suggestion = document.getElementById('eigthsuggestion');
+const nine_suggestion = document.getElementById('ninethsuggestion');
+let each_suggestion = [first_suggestion, second_suggestion, third_suggestion, fourth_suggestion, fifth_suggestion, sixth_suggestion, seventh_suggestion, eigth_suggestion, nine_suggestion];
+
+const ultimate_result = document.getElementById('ultimateresult');
+const main_part = document.getElementById('main');
 
 const submit_button = document.getElementById('submit')
-
 submit_button.addEventListener('click', ()=>{
+    ultimate_result.style.display = 'flex';
+    main_part.style.display = 'none';
+    resulting_array = temp_array.sort((a,b) => (a.score < b.score) ? 1 : ((b.score < a.score) ? -1 : 0)) 
+    if(resulting_array.length >=9){
+    suggestions = resulting_array.slice(0,9);}else{suggestions=resulting_array;}
+    for (let k=0; k< suggestions.length; k++){
+        each_suggestion[k].innerText = suggestions[k].name + ", " + suggestions[k].country;
+        each_suggestion[k].style.backgroundImage = suggestions[k].photo; 
+        each_suggestion[k].style.borderColor = 'black';
+    }
+})
 
-    if (submit_button.innerText == "Reset"){
+const reset_button = document.getElementById('reset');
+reset_button.addEventListener('click', ()=>{
+    ultimate_result.style.display = 'none';
+    main_part.style.display = 'flex';
+
+    money_display.innerText = '240$'; sliderreader.value = 240;
+    safetysliderreader.value = 3; safety_display.innerText='Usually Safe';
+
         cuisine_number=0; culture_number=0; special_events_number=0; natural_sig_number=0; arch_sig_number=0; sincere_number=0; respect_number=0; equa_number=0; arctic_number=0; monsoon_number=0; dry_number=0; mediter_number=0;maritime_number=0; continental_number=0;
         for (let p=0; p<all_destinations.length; p++){
             all_destinations[p].score = 0;}
-        submit_button.innerText = "Submit"
-
-        while(suggestion_list.hasChildNodes()){suggestion_list.removeChild(suggestion_list.firstChild)}
-        each_element = "";
-        resulting_element.style.visibility = "hidden";
 
         for(let h=0; h<all_activities.length; h++){all_activities[h].style.borderColor ='rgba(0,0,0,0)'; all_activities_bool[h]=false;}
         for(let y=0; y<all_preferences.length; y++){all_preferences[y].style.borderColor = 'rgba(0,0,0,0)'; all_preference_titles_bool[y]=false;}
@@ -476,22 +501,6 @@ submit_button.addEventListener('click', ()=>{
         }
         image_index = Math.floor(Math.random()*6);
         body.style.backgroundImage = background_image_list[image_index];
-    }
-
-    else if (submit_button.innerText == "Submit"){
-    resulting_array = temp_array.sort((a,b) => (a.score < b.score) ? 1 : ((b.score < a.score) ? -1 : 0)) 
-    if(resulting_array.length >=5){
-    suggestions = resulting_array.slice(0,5);}else{suggestions=resulting_array;}
-    resulting_element.style.visibility = 'visible';
-    for (let k=0; k< suggestions.length; k++){
-        each_element = each_element + "<li>" + suggestions[k].name + ", " + suggestions[k].country +  "</li>"
-    }
-    suggestion_list.innerHTML = each_element;
-    submit_button.innerText = "Reset";
-}
-
 
 
 })
-
-
