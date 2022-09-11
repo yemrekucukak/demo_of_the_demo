@@ -509,38 +509,83 @@ let climate_read_less = document.getElementById('climate_read_less');
 let all_climate_explanations = [];
 all_climate_explanations = document.getElementsByClassName('climate_advanced_explanation');
 let climate_more_button = document.getElementById('climate_more_info');
+const mother_climate_container = document.getElementById('climate_advanced_explanation_container');
+const all_climate_buttons = document.getElementById('all_climate_buttons');
+
 climate_more_button.addEventListener('click', ()=>{
+    
+    if(window.innerWidth < 600){
+        for(let p=0; p<all_climate_explanations.length; p++){all_climate_explanations[p].style.visibility = 'visible';}
+        mother_climate_container.style.visibility = 'visible';
+        all_climate_buttons.style.visibility = 'hidden';
+        climate_more_button.style.visibility = 'hidden';
+        climate_read_less.style.visibility = 'visible';
+    }
+
+    else{
     for(let p=0; p<all_climate_explanations.length; p++){
         all_climate_explanations[p].style.visibility = 'visible';
     }
     climate_more_button.style.visibility = 'hidden';
     climate_read_less.style.visibility = 'visible';
+}
 })
 
 climate_read_less.addEventListener('click', ()=>{
-    for(let p=0; p<all_climate_explanations.length; p++){
-        all_climate_explanations[p].style.visibility = 'hidden';
+
+    if(window.innerWidth < 600){
+        for(let p=0; p<all_climate_explanations.length; p++){all_climate_explanations[p].style.visibility = 'hidden';}
+        mother_climate_container.style.visibility = 'hidden';
+        all_climate_buttons.style.visibility = 'visible';
+        climate_more_button.style.visibility = 'visible';
+        climate_read_less.style.visibility = 'hidden';
     }
+
+    else{for(let p=0; p<all_climate_explanations.length; p++){ all_climate_explanations[p].style.visibility = 'hidden';}
     climate_more_button.style.visibility='visible';
     climate_read_less.style.visibility='hidden';
+}
 })
+
+
 
 let attraction_read_less = document.getElementById('attraction_read_less');
 let all_attraction_explanations = [];
 all_attraction_explanations = document.getElementsByClassName('attractions_advanced_explanation');
 let attraction_more_button = document.getElementById('attraction_more_info');
+const mother_container = document.getElementById('attractions_advanced_explanation_container');
+const attraction_button_container = document.getElementById('attraction_buttons');
+
 attraction_more_button.addEventListener('click', ()=>{
-    for(let p=0; p<all_attraction_explanations.length; p++){
-        all_attraction_explanations[p].style.visibility = 'visible';
-    }
+    
+    if(window.innerWidth < 600){
+    mother_container.style.visibility = 'visible';
     attraction_more_button.style.visibility = 'hidden';
     attraction_read_less.style.visibility = 'visible';
+    attraction_button_container.style.visibility = 'hidden';
+}
+else{
+    for(let p=0; p<all_attraction_explanations.length; p++){
+        all_attraction_explanations[p].style.visibility = 'visible';}
+    attraction_more_button.style.visibility = 'hidden';
+    attraction_read_less.style.visibility = 'visible';
+}
+
 })
 
 attraction_read_less.addEventListener('click', ()=>{
-    for(let p=0; p<all_attraction_explanations.length; p++){
+
+    if(window.innerWidth < 600){
+    mother_container.style.visibility = 'hidden';
+    attraction_more_button.style.visibility = 'visible';
+    attraction_read_less.style.visibility = 'hidden';
+    attraction_button_container.style.visibility = 'visible';
+    }
+
+    else{for(let p=0; p<all_attraction_explanations.length; p++){
         all_attraction_explanations[p].style.visibility = 'hidden';
     }
     attraction_more_button.style.visibility='visible';
     attraction_read_less.style.visibility='hidden';
+}
 })
