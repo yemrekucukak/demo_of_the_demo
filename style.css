@@ -1,6 +1,6 @@
 body{text-align: center; margin: 0; background-size: cover;}
 
-#title{margin-top: 12vh; margin-bottom: 6vh; font-size: 6em; color: whitesmoke; background-color: rgba(0,0,0,0.24);}
+#title{margin-top: 12vh; margin-bottom: 6vh; font-size: 6vw; color: whitesmoke; background-color: rgba(0,0,0,0.24); user-select: none;}
 
 
 #all_questions{
@@ -20,24 +20,24 @@ body{text-align: center; margin: 0; background-size: cover;}
 
 }
 
-.q{display: flex; flex-direction: column; font-size: 2.4em; font-weight: bolder; justify-content:center; padding-left:7.2vw; padding-right: 7.2vw; color: whitesmoke; border-color: rgba(0,0,0,0.9);}
+.q{display: flex; flex-direction: column; font-size: 3vw; user-select: none; font-weight: bolder; justify-content:center; padding-left:7.2vw; padding-right: 7.2vw; color: whitesmoke; border-color: rgba(0,0,0,0.9);}
 
-#respect{font-size: 1.2em; padding-left:2.4vw; padding-right:2.4vw; padding-top: 2vh; padding-bottom: 2vh;}
+#respect{font-size: 1.2vw; padding-left:2.4vw; padding-right:2.4vw; padding-top: 2vh; padding-bottom: 2vh;}
 .test_options{
-    display: flex; flex-direction: column; justify-content:center; font-weight: bolder; font-size: 1.08em; padding-left:7.2vw; padding-right: 7.2vw; gap:0.18vw;}
+    display: flex; flex-direction: column; justify-content:center; font-weight: bolder; font-size: 1.2vw; padding-left:7.2vw; padding-right: 7.2vw; gap:0vw;}
 
-.parentsforbuttons{display: flex; flex-direction: row; justify-content:center; gap: 1vw; margin-right: 3vw;}
+.parentsforbuttons{display: flex; flex-direction: row; justify-content:center; gap: 3vw; margin-right: 6vw;}
 
-.explanations{font-size: 0.48em; text-align: left; font-weight:bold; color:snow;}  
+.explanations{font-size: 1.2vw; text-align: left; font-weight:bold; color:snow; user-select: none;}  
 
 .slidecontainer {width: 90%;}
-#slider_value{font-size: 1.2em; color: whitesmoke; padding-top: 1vh;}
+#slider_value{font-size: 1.32vw; color: whitesmoke; padding-top: 1vh; user-select: none;}
 
 .slider {
     margin-top: 1vh;
         -webkit-appearance: none;
         width: 72%;
-        height: 3vh;
+        height: 3.6vh;
         background: rgba(240,240,240, 0.6);
         outline: none;
         opacity: 0.7;
@@ -51,48 +51,48 @@ body{text-align: center; margin: 0; background-size: cover;}
     -webkit-appearance: none; 
     appearance: none;
     width: 3vw; 
-    height: 2.76vh; 
+    height: 3vh; 
     background: rgba(0,0,0,0.72);
     cursor: pointer; 
   }
   
 #preferences{display: flex; flex-direction: column; align-items: center; margin-bottom: 3vh; padding-left: 9vw; padding-right: 9vw;}
-#dropdowns{display: flex; flex-direction: row; font-size: 1.72em; font-weight: bolder; color: whitesmoke; gap: 6vw;}
+#dropdowns{display: flex; flex-direction: row; font-size: 1.8vw; font-weight: bolder; color: whitesmoke; gap: 6vw; user-select: none;}
 
-#natureelements{display:none; font-size: 0.9em;}   .dropclassnature{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
-#cultureelements{display:none; font-size: 0.9em;}  .dropclassculture{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
-#entertainmentelements{display:none; font-size: 0.9em;} .dropclassentertainment{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
-#cuisineelements{display:none; font-size: 0.9em;} .dropclasscuisine{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
+#natureelements{display:none; font-size: 1.5vw;}   .dropclassnature{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
+#cultureelements{display:none; font-size:  1.5vw;}  .dropclassculture{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
+#entertainmentelements{display:none; font-size:  1.5vw;} .dropclassentertainment{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
+#cuisineelements{display:none; font-size:  1.5vw;} .dropclasscuisine{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
 
 
-.droptitle{margin-top: 1vh; font-size: 1.2em; padding-left:2vw; padding-right:2vw; padding-top: 1.2vh; padding-bottom: 1.2vh; transition: background-color .6s; border-style: solid; border-color: rgba(0,0,0,0);}
+.droptitle{user-select: none; margin-top: 1vh; font-size: 1.98vw; padding-left:2vw; padding-right:2vw; padding-top: 1.2vh; padding-bottom: 1.2vh; transition: background-color .6s; border-style: solid; border-color: rgba(0,0,0,0);}
 .droptitle:hover{border-style: solid; border-color: whitesmoke; border-width: 0.108vw;}
 
 
 #activities_container{display: flex; flex-direction: column; align-items: center;}
-#selection_items1{display: flex; flex-direction: row; color: whitesmoke; font-size: 1.5em; gap:1.2vw; margin: 1.2vh; }
-#selection_items2{display: flex; flex-direction: row; color: whitesmoke; font-size: 1.5em; gap:1.2vw;  margin: 1.2vh;  }
-#selection_items3{display: flex; flex-direction: row; color: whitesmoke; font-size: 1.5em; gap:1.2vw;  margin: 1.2vh;  }
-.selection{padding:1.8vh; border-style: solid; border-color: rgba(0,0,0,0); transition: background-color .4s;}
+#selection_items1{display: flex; flex-direction: row; color: whitesmoke; font-size: 1.5vw; gap:1.2vw; margin: 0.3vw; user-select: none;}
+#selection_items2{display: flex; flex-direction: row; color: whitesmoke; font-size: 1.5vw; gap:1.2vw;  margin: 0.3vw; user-select: none; }
+#selection_items3{display: flex; flex-direction: row; color: whitesmoke; font-size: 1.5vw; gap:1.2vw;  margin: 0.3vw; user-select: none; }
+.selection{padding:0.96vw; border-style: solid; border-color: rgba(0,0,0,0); transition: background-color .4s;}
 .selection:hover{background-color: rgba(0,0,0,0.78);}
 
 
-button{font-size: 1.2em; border-style: groove; padding-left: 6vw; padding-right: 6vw; 
-    background-color: rgba(0,0,0,0.9); color: whitesmoke; margin-top: 2vh; border-bottom: 2vh; margin-right: 1vw;
+button{font-size: 1.32vw; border-style: groove; padding-left: 6vw; padding-right: 6vw; 
+    background-color: rgba(0,0,0,0.9); color: whitesmoke; margin-top: 0.9vw; border-bottom: 2vh; margin-right: 1vw;
     border-radius: 24px 0px 24px 0px; border-style: none;
     transition: background-color .6s;
     }
 
 button:hover{background-color: rgba(240,240,240, 0.6);}
 
-.click_text{visibility: hidden; background-color:rgba(0,0,0,0.96); color: white; border-radius: 12px; padding: 1vh;}
+.click_text{visibility: hidden; background-color:rgba(0,0,0,0.96); color: white; border-radius: 12px; padding: 1vh; user-select: none;}
 
 
 #nav_bar{position: fixed; display: flex; flex-direction: row; 
     background-color: rgba(0,0,0,0.9); top: 0; justify-content: space-evenly;
-    font-size: 1.8em; font-weight: bolder;
+    font-size: 1.8vw; font-weight: bolder; user-select: none;
       align-content: center; 
-    color: whitesmoke; border-style: solid; border-color: whitesmoke;}
+    color: whitesmoke; border-style: solid; border-color: whitesmoke; border-top-style: none;}
 
 .nav_element{border-left-style: solid; border-color: whitesmoke;  padding-top: 4.8vh; padding-bottom: 2.4vh; padding-right: 4.8vw; padding-left: 4.8vw;}
 .nav_element:hover{background-color: whitesmoke; color: rgba(0,0,0,0.72);}
@@ -100,7 +100,7 @@ button:hover{background-color: rgba(240,240,240, 0.6);}
 #nav_container{display: flex; flex-direction: row; justify-content: space-evenly;}
 
 
-#submit{width:20vw; margin-top: 6vh; font-size: 2.4em; font-weight: bolder; padding: 0.6vw 3.6vw 0.6vw 3.6vw; border-width: 3px; background-color: rgba(240,240,240, 0.78); color:black; border-style: groove; border-color:rgba(0,0,0,0.78); }
+#submit{width:20vw; margin-top: 6vh; margin-bottom: 3vh; font-size: 2.7vw; font-weight: bolder; padding: 0.6vw 3.6vw 0.6vw 3.6vw; border-width: 3px; background-color: rgba(240,240,240, 0.78); color:black; border-style: groove; border-color:rgba(0,0,0,0.78); }
 #submit:hover{background-color: rgba(0,0,0,0.84); color:rgba(240,240,240, 0.78); border-color: whitesmoke; border-style: groove;}
 
 
@@ -113,7 +113,7 @@ button:hover{background-color: rgba(240,240,240, 0.6);}
 #safety{padding-left: 3vw; padding-right: 3vw; padding-top: 1vh;}
 
 .newslidecontainer {width: 90%;}
-#new_slider_value{font-size: 1.2em; color: whitesmoke; padding-top: 1vh;}
+#new_slider_value{font-size: 1.5vw; color: whitesmoke; padding-top: 1vh; user-select: none;}
 
 .newslider {
     margin-top: 1vh;
@@ -137,16 +137,27 @@ button:hover{background-color: rgba(240,240,240, 0.6);}
     background: rgba(0,0,0,0.84);
     cursor: pointer; 
   }
-#warning{text-align: center; font-size: 0.78em; color:rgba(240,0,0,0.66)}
+#warning{text-align: center; font-size: 0.9vw; color:rgba(240,0,0,0.66); user-select: none;}
 
-#text_respect{padding-top: 2.4vh;}
+#text_respect{padding-top: 2.4vh; user-select: none;}
 
 
 
 #ultimateresult{display: none; flex-direction: column; gap:3vh; margin-top: 15vh;}
-#resulttitle{font-weight: bolder; font-size: 3em; text-align: center; color: whitesmoke;}
+#resulttitle{font-weight: bolder; font-size: 4.8vw; text-align: center; color: whitesmoke; user-select: none;}
 .resultrows{display: flex; flex-direction: row; text-align: center; justify-content: space-evenly;} 
-.eachresult{width:30%; color: white; font-size: 2.4em; padding-top:7.8vh; padding-bottom:7.8vh; background-size: cover; border-style: solid; border-color: rgba(0,0,0,0);}
+.eachresult{width:30%; color: white; font-size: 2.4vw; user-select: none; padding-top:7.8vh; padding-bottom:7.8vh; background-size: cover; border-style: solid; border-color: rgba(0,0,0,0);}
 .eachresult:hover{border-color: snow; color: black;}
-#reset{width:20vw; margin-left: 40vw; margin-top: 3vh; font-size: 2.4em; font-weight: bolder; padding: 0.6vw 3.6vw 0.6vw 3.6vw; border-width: 3px; background-color: rgba(240,240,240, 0.78); color:black; border-style: groove;}
+#reset{width:20vw; margin-left: 40vw; margin-top: 3vh; margin-bottom: 3vh; font-size: 2.7vw; font-weight: bolder; padding: 0.6vw 3.6vw 0.6vw 3.6vw; border-width: 3px; background-color: rgba(240,240,240, 0.78); color:black; border-style: groove;}
 #reset:hover{background-color: rgba(0,0,0,0.84); color:rgba(240,240,240, 0.78); border-color: whitesmoke; border-style: groove;}
+
+
+
+.climate_advanced_explanation{visibility: hidden;}
+#climate_read_less{visibility: hidden;}
+.more_buttons{
+  text-decoration: underline;
+}
+
+.attractions_advanced_explanation{visibility: hidden;}
+#attraction_read_less{visibility: hidden;}
