@@ -504,3 +504,43 @@ reset_button.addEventListener('click', ()=>{
 
 
 })
+
+let climate_read_less = document.getElementById('climate_read_less');
+let all_climate_explanations = [];
+all_climate_explanations = document.getElementsByClassName('climate_advanced_explanation');
+let climate_more_button = document.getElementById('climate_more_info');
+climate_more_button.addEventListener('click', ()=>{
+    for(let p=0; p<all_climate_explanations.length; p++){
+        all_climate_explanations[p].style.visibility = 'visible';
+    }
+    climate_more_button.style.visibility = 'hidden';
+    climate_read_less.style.visibility = 'visible';
+})
+
+climate_read_less.addEventListener('click', ()=>{
+    for(let p=0; p<all_climate_explanations.length; p++){
+        all_climate_explanations[p].style.visibility = 'hidden';
+    }
+    climate_more_button.style.visibility='visible';
+    climate_read_less.style.visibility='hidden';
+})
+
+let attraction_read_less = document.getElementById('attraction_read_less');
+let all_attraction_explanations = [];
+all_attraction_explanations = document.getElementsByClassName('attractions_advanced_explanation');
+let attraction_more_button = document.getElementById('attraction_more_info');
+attraction_more_button.addEventListener('click', ()=>{
+    for(let p=0; p<all_attraction_explanations.length; p++){
+        all_attraction_explanations[p].style.visibility = 'visible';
+    }
+    attraction_more_button.style.visibility = 'hidden';
+    attraction_read_less.style.visibility = 'visible';
+})
+
+attraction_read_less.addEventListener('click', ()=>{
+    for(let p=0; p<all_attraction_explanations.length; p++){
+        all_attraction_explanations[p].style.visibility = 'hidden';
+    }
+    attraction_more_button.style.visibility='visible';
+    attraction_read_less.style.visibility='hidden';
+})
