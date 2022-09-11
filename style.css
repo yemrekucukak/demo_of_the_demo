@@ -1,4 +1,4 @@
-@media screen and (min-width: 900px){
+@media screen and (min-width: 1200px){
 
 body{text-align: center; margin: 0; background-size: cover;}
 #title{margin-top: 12vh; margin-bottom: 6vh; font-size: 6vw; color: whitesmoke; background-color: rgba(0,0,0,0.24); user-select: none;}
@@ -163,7 +163,7 @@ button:hover{background-color: rgba(240,240,240, 0.6);}
 
 
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 1200px){
 
 body{text-align: center; margin: 0; }
 
