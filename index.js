@@ -487,8 +487,13 @@ submit_button.addEventListener('click', ()=>{
     }
     loading_text.innerText = "We're preparing a suggestion list";
     loading_screen.style.display = 'block';
-    setTimeout(()=>{loading_screen.style.display='none'; }, 7200);
+    
+    if(window.innerWidth < 1200){setTimeout(()=>{document.getElementById('bud').style.backgroundColor = 'black'; loading_screen.style.display='none'; }, 9600);}
+    else{setTimeout(()=>{loading_screen.style.display='none'; }, 7200);}
+    image_index = Math.floor(Math.random()*6);
+        body.style.backgroundImage = background_image_list[image_index];
 })
+
 
 const reset_button = document.getElementById('reset');
 reset_button.addEventListener('click', ()=>{
@@ -607,4 +612,16 @@ attraction_read_less.addEventListener('click', ()=>{
     attraction_more_button.style.visibility='visible';
     attraction_read_less.style.visibility='hidden';
 }
+})
+
+
+const menu_button = document.getElementById('menu_button');
+const nav_bar = document.getElementById('nav_bar');
+
+menu_button.addEventListener('click', ()=>{
+    if(nav_bar.style.display == 'none'){
+        nav_bar.style.display = 'flex';
+        menu_button.style.borderColor='snow';
+        }
+    else{nav_bar.style.display = 'none'; menu_button.style.borderColor='black';}
 })
