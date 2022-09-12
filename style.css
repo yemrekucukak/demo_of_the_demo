@@ -54,6 +54,11 @@ body{text-align: center; margin: 0; background-size: cover;}
 #attractions_advanced_explanation_container{visibility: visible;}
 
 #preferences{display: flex; flex-direction: column; align-items: center; margin-bottom: 3vh; padding-left: 9vw; padding-right: 9vw;}
+
+#all_preferences{display: flex; flex-direction: row; gap: 3vw;}
+#first_row_of_preferences{display: flex; flex-direction: row; gap:3vw;}
+#second_row_of_preferences{display: flex; flex-direction: row; gap:3vw;}
+
 #dropdowns{display: flex; flex-direction: row; font-size: 1.8vw; font-weight: bolder; color: whitesmoke; gap: 6vw; user-select: none;}
 
 #natureelements{display:none; font-size: 1.5vw;}   .dropclassnature{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
@@ -232,7 +237,7 @@ button:hover{background-color: rgba(240,240,240, 0.6);}
 
 body{text-align: center; margin: 0; background-size: cover; background-attachment: fixed;}
 
-#title{margin-top: 6vh; margin-bottom: 3vh; font-size: 9.72vw; color: whitesmoke; background-color: rgba(0,0,0,0.24); user-select: none; width:100%;}
+#title{margin-top: 7.2vh; margin-bottom: 3vh; font-size: 9.72vw; color: whitesmoke; background-color: rgba(0,0,0,0.24); user-select: none; width:100%;}
 
 #menu_button{display:block; color: snow; background-color: rgba(0,0,0,0.96); padding:1.8vh 3.6vh 1.8vh 3.6vh; position: fixed; font-size: 2.4vh; user-select: none; border-style: solid; border-color: black; border-left-style: none;}
 #nav_bar{position: fixed; display: none; flex-direction: column; margin-top: 6.6vh;
@@ -304,16 +309,23 @@ body{text-align: center; margin: 0; background-size: cover; background-attachmen
 
 #attractions_advanced_explanation_container{visibility: hidden; position: absolute; z-index: 6; font-size: 1.5vh;}
 
+
 #preferences{display: flex; flex-direction: column; align-items: center; margin-bottom: 2.4vh; padding-left: 0vw; padding-right: 0vw;}
 #dropdowns{display: flex; flex-direction: row; font-size: 1.2vh; font-weight: bolder; color: whitesmoke; gap: 2.4vw; user-select: none;}
+
+#all_preferences{display: flex; flex-direction: row; gap: 3vw; text-align: center;}
+#first_row_of_preferences{display: flex; flex-direction: column; gap:3vw; text-align: center;}
+#second_row_of_preferences{display: flex; flex-direction: column; gap:3vw; text-align: center;}
 
 #natureelements{display:none; font-size: 1.2vh;}   .dropclassnature{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
 #cultureelements{display:none; font-size:  1.2vh;}  .dropclassculture{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
 #entertainmentelements{display:none; font-size: 1.2vh;} .dropclassentertainment{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
 #cuisineelements{display:none; font-size:  1.2vh;} .dropclasscuisine{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
 
-.droptitle{user-select: none; margin-top: 1vh; font-size: 1.32vh; padding-left:1.2vw; padding-right:1.2vw; padding-top: 1.2vh; padding-bottom: 1.2vh; transition: background-color .9s; border-style: solid; border-color: rgba(0,0,0,0);}
+.droptitle{user-select: none; margin-top: 1vh; font-size: 1.8vh; padding-left:1.2vw; padding-right:1.2vw; padding-top: 1.2vh; padding-bottom: 1.2vh; transition: background-color .9s; border-style: solid; border-color: rgba(0,0,0,0);}
 .droptitle:hover{border-style: solid; border-color: whitesmoke; border-width: 0.108vw;}
+
+
 
 #activity_exp{font-size: 1.5vh;}
 #activities_container{display: flex; flex-direction: column; align-items: center;}
@@ -388,7 +400,7 @@ button:hover{background-color: rgba(240,240,240, 0.6);}
 #climate_read_less{visibility: hidden;}
 .more_buttons{text-decoration: underline;}
 
-#ultimateresult{display: none; flex-direction: column; gap:3vh; margin-top: 15vh; }
+#ultimateresult{display: none; flex-direction: column; gap:3vh; margin-top: 7.2vh; }
 #resulttitle{font-weight: bolder; font-size: 7.8vw; text-align: center; color: whitesmoke; user-select: none;}
 .resultrows{display: flex; flex-direction: column; text-align: center; justify-content: space-around; gap:3.6vh; align-items: center;} 
 .eachresult{width:80%; height:42%; color: white; font-size: 3vh; user-select: none; padding-top:7.8vh; padding-bottom:7.8vh; background-size: cover; border-style: solid; border-color: rgba(0,0,0,0);}
