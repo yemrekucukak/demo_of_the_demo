@@ -558,7 +558,7 @@ const attraction_button_container = document.getElementById('attraction_buttons'
 
 attraction_more_button.addEventListener('click', ()=>{
     
-    if(window.innerWidth < 600){
+    if(window.innerWidth < 1200){
     mother_container.style.visibility = 'visible';
     attraction_more_button.style.visibility = 'hidden';
     attraction_read_less.style.visibility = 'visible';
@@ -575,7 +575,7 @@ else{
 
 attraction_read_less.addEventListener('click', ()=>{
 
-    if(window.innerWidth < 600){
+    if(window.innerWidth < 1200){
     mother_container.style.visibility = 'hidden';
     attraction_more_button.style.visibility = 'visible';
     attraction_read_less.style.visibility = 'hidden';
