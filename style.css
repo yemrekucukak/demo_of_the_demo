@@ -258,7 +258,7 @@ body{text-align: center; margin: 0; background-size: cover; background-attachmen
     display: flex; flex-direction: column; justify-content:center; font-weight: bolder; font-size: 1.2vw; padding-left:7.2vw; padding-right: 7.2vw; gap:0vw;}
 
 .parentsforbuttons{display: flex; flex-direction: row; justify-content:center; gap: 3vw; margin-right: 6vw;}
-.explanations{font-size: 1.8vh; text-align: left; font-weight:bold; color:snow; user-select: none;}  
+.explanations{font-size: 1.8vw; text-align: left; font-weight:bold; color:snow; user-select: none;}  
 
 
 
@@ -299,19 +299,19 @@ body{text-align: center; margin: 0; background-size: cover; background-attachmen
 #preferences{display: flex; flex-direction: column; align-items: center; margin-bottom: 2.4vh; padding-left: 0vw; padding-right: 0vw;}
 #dropdowns{display: flex; flex-direction: row; font-size: 1.2vh; font-weight: bolder; color: whitesmoke; gap: 2.4vw; user-select: none;}
 
-#natureelements{display:none; font-size: 1.8vh;}   .dropclassnature{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
-#cultureelements{display:none; font-size:  1.8vh;}  .dropclassculture{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
-#entertainmentelements{display:none; font-size:  1.8vh;} .dropclassentertainment{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
-#cuisineelements{display:none; font-size:  1.8vh;} .dropclasscuisine{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
+#natureelements{display:none; font-size: 1.5vh;}   .dropclassnature{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
+#cultureelements{display:none; font-size:  1.5vh;}  .dropclassculture{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
+#entertainmentelements{display:none; font-size:  1.5vh;} .dropclassentertainment{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
+#cuisineelements{display:none; font-size:  1.5vh;} .dropclasscuisine{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
 
-.droptitle{user-select: none; margin-top: 1vh; font-size: 2.4vh; padding-left:1.2vw; padding-right:1.2vw; padding-top: 1.2vh; padding-bottom: 1.2vh; transition: background-color .9s; border-style: solid; border-color: rgba(0,0,0,0);}
+.droptitle{user-select: none; margin-top: 1vh; font-size: 1.8vh; padding-left:1.2vw; padding-right:1.2vw; padding-top: 1.2vh; padding-bottom: 1.2vh; transition: background-color .9s; border-style: solid; border-color: rgba(0,0,0,0);}
 .droptitle:hover{border-style: solid; border-color: whitesmoke; border-width: 0.108vw;}
 
 #activities_container{display: flex; flex-direction: column; align-items: center;}
-#all_activities{display: flex; flex-direction: row; align-items: center;}
-#selection_items1{display: flex; flex-direction: column; color: whitesmoke; font-size: 1.5vh; gap:0.3vw; margin: 0.12vw; user-select: none;}
-#selection_items2{display: flex; flex-direction: column; color: whitesmoke; font-size: 1.5vh; gap:0.3vw;  margin: 0.12vw; user-select: none; }
-#selection_items3{display: flex; flex-direction: column; color: whitesmoke; font-size: 1.5vh; gap:0.3vw;  margin: 0.12vw; user-select: none; }
+#all_activities{display: flex; flex-direction: row; align-items: center; gap:6vh}
+#selection_items1{display: flex; flex-direction: column; color: whitesmoke; font-size: 1.56vh; gap:0.3vw; margin: 0.12vw; user-select: none;}
+#selection_items2{display: flex; flex-direction: column; color: whitesmoke; font-size: 1.56vh; gap:0.3vw;  margin: 0.12vw; user-select: none; }
+#selection_items3{display: flex; flex-direction: column; color: whitesmoke; font-size: 1.56vh; gap:0.3vw;  margin: 0.12vw; user-select: none; }
 .selection{padding:0.96vw; border-style: solid; border-color: rgba(0,0,0,0); transition: background-color .6s;}
 .selection:hover{background-color: rgba(0,0,0,0.78);}
 
@@ -330,7 +330,7 @@ button:hover{background-color: rgba(240,240,240, 0.6);}
 #text_na{padding-top: 1.8vh;}
 #text_sp{padding-top: 1.8vh;}
 #text_monsoon{padding-top: 1.8vh;}
-#respect{font-size: 2.1vh; padding-left:2.4vw; padding-right:2.4vw; padding-top: 2vh; padding-bottom: 2vh;}
+#respect{font-size: 1.8vh; padding-left:2.4vw; padding-right:2.4vw; padding-top: 2vh; padding-bottom: 2vh;}
 
 #submit{width:48vw; margin-top: 6vh; margin-bottom: 3vh; font-size: 4.2vh; font-weight: bolder; padding: 1.2vh 4.8vh 1.2vh 4.8vh; border-width: 2px; background-color: rgba(240,240,240, 0.78); color:black; border-style: groove; border-color:rgba(0,0,0,0.78); }
 #submit:hover{background-color: rgba(0,0,0,0.84); color:rgba(240,240,240, 0.78); border-color: whitesmoke; border-style: groove;}
@@ -344,7 +344,7 @@ button:hover{background-color: rgba(240,240,240, 0.6);}
 #safety{padding-left: 3vw; padding-right: 3vw; padding-top: 1vh;}
 
 .newslidecontainer {width: 100%;}
-#new_slider_value{font-size: 1.8vh; color: whitesmoke; padding-top: 1vh; user-select: none;}
+#new_slider_value{font-size: 1.56vh; color: whitesmoke; padding-top: 1vh; user-select: none;}
 
 .newslider {
     margin-top: 1vh;
@@ -368,7 +368,7 @@ button:hover{background-color: rgba(240,240,240, 0.6);}
     background: rgba(0,0,0,0.84);
     cursor: pointer; 
   }
-#warning{text-align: center; font-size: 1.2vh; color:rgba(240,0,0,0.66); user-select: none;}
+#warning{text-align: center; font-size: 0.9vh; color:rgba(240,0,0,0.66); user-select: none;}
 
 #climate_section{display: flex; flex-direction: column;}
 #climate_advanced_explanation_container{position: absolute; z-index: 6; visibility: hidden;}
