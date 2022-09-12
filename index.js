@@ -488,7 +488,7 @@ submit_button.addEventListener('click', ()=>{
     loading_text.innerText = "We're preparing a suggestion list";
     loading_screen.style.display = 'block';
     
-    if(window.innerWidth < 1200){setTimeout(()=>{document.getElementById('bud').style.backgroundColor = 'black'; loading_screen.style.display='none'; }, 9600);}
+    if(window.innerWidth < 1200){setTimeout(()=>{document.getElementById('bud').style.backgroundColor = 'black'; loading_screen.style.display='none'; }, 12000);}
     else{setTimeout(()=>{loading_screen.style.display='none'; }, 7200);}
     image_index = Math.floor(Math.random()*6);
         body.style.backgroundImage = background_image_list[image_index];
