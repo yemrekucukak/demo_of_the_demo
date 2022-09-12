@@ -465,10 +465,12 @@ let each_suggestion = [first_suggestion, second_suggestion, third_suggestion, fo
 const ultimate_result = document.getElementById('ultimateresult');
 const main_part = document.getElementById('main');
 
+const loading_screen = document.getElementById('loading_screen');
 const submit_button = document.getElementById('submit')
 submit_button.addEventListener('click', ()=>{
-    ultimate_result.style.display = 'flex';
     main_part.style.display = 'none';
+    ultimate_result.style.display = 'flex';
+    loading_screen.style.display = 'block';
     resulting_array = temp_array.sort((a,b) => (a.score < b.score) ? 1 : ((b.score < a.score) ? -1 : 0)) 
     if(resulting_array.length >=9){
     suggestions = resulting_array.slice(0,9);}else{suggestions=resulting_array;}
@@ -477,12 +479,14 @@ submit_button.addEventListener('click', ()=>{
         each_suggestion[k].style.backgroundImage = suggestions[k].photo; 
         each_suggestion[k].style.borderColor = 'black';
     }
+    setTimeout(()=>{loading_screen.style.display='none'; }, 5400);
 })
 
 const reset_button = document.getElementById('reset');
 reset_button.addEventListener('click', ()=>{
     ultimate_result.style.display = 'none';
     main_part.style.display = 'flex';
+    loading_screen.style.display = 'block';
 
     money_display.innerText = '240$'; sliderreader.value = 240;
     safetysliderreader.value = 3; safety_display.innerText='Usually Safe';
@@ -501,7 +505,7 @@ reset_button.addEventListener('click', ()=>{
         }
         image_index = Math.floor(Math.random()*6);
         body.style.backgroundImage = background_image_list[image_index];
-
+        setTimeout(()=>{loading_screen.style.display='none'; }, 5400);
 
 })
 
