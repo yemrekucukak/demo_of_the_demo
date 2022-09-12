@@ -157,12 +157,12 @@ button:hover{background-color: rgba(240,240,240, 0.6);}
 #loading_symbol{margin-top: 12vh; user-select: none; display: flex; flex-direction: row; justify-content: center; gap: 2.4vh;}
 .animation_objects{width:6vh; height:6vh; border-radius: 18px;}
 
-#one{background-color:red; position: relative; animation-name: example1; animation-duration: 5.4s;}
-#two{background-color: orange; position: relative; animation-name: example2; animation-duration: 5.4s;}
-#three{background-color: yellow; position: relative; animation-name: example3; animation-duration: 5.4s;}
-#four{background-color: lightgreen; position: relative; animation-name: example4; animation-duration: 5.4s;}
-#five{background-color: blue; position: relative; animation-name: example5; animation-duration: 5.4s;}
-#six{background-color: violet; position: relative; animation-name: example6; animation-duration: 5.4s;}
+#one{background-color:red; position: relative; animation-name: example1; animation-duration: 6.6s;}
+#two{background-color: orange; position: relative; animation-name: example2; animation-duration: 6.6s;}
+#three{background-color: yellow; position: relative; animation-name: example3; animation-duration: 6.6s;}
+#four{background-color: lightgreen; position: relative; animation-name: example4; animation-duration: 6.6s;}
+#five{background-color: blue; position: relative; animation-name: example5; animation-duration: 6.6s;}
+#six{background-color: violet; position: relative; animation-name: example6; animation-duration: 6.6s;}
 
 @keyframes example1 {
   0% {background-color: red;}
@@ -258,9 +258,7 @@ body{text-align: center; margin: 0; background-size: cover; background-attachmen
     display: flex; flex-direction: column; justify-content:center; font-weight: bolder; font-size: 1.2vw; padding-left:7.2vw; padding-right: 7.2vw; gap:0vw;}
 
 .parentsforbuttons{display: flex; flex-direction: row; justify-content:center; gap: 3vw; margin-right: 6vw;}
-.explanations{font-size: 1.8vw; text-align: left; font-weight:bold; color:snow; user-select: none;}  
-
-
+.explanations{font-size: 1.68vh; text-align: left; font-weight:bold; color:snow; user-select: none;}  
 
 
 
@@ -294,21 +292,22 @@ body{text-align: center; margin: 0; background-size: cover; background-attachmen
   display: flex; flex-direction: column;
 }
 
-#attractions_advanced_explanation_container{visibility: hidden; position: absolute; z-index: 6; }
+#attractions_advanced_explanation_container{visibility: hidden; position: absolute; z-index: 6; font-size: 1.5vh;}
 
 #preferences{display: flex; flex-direction: column; align-items: center; margin-bottom: 2.4vh; padding-left: 0vw; padding-right: 0vw;}
 #dropdowns{display: flex; flex-direction: row; font-size: 1.2vh; font-weight: bolder; color: whitesmoke; gap: 2.4vw; user-select: none;}
 
-#natureelements{display:none; font-size: 1.5vh;}   .dropclassnature{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
-#cultureelements{display:none; font-size:  1.5vh;}  .dropclassculture{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
-#entertainmentelements{display:none; font-size:  1.5vh;} .dropclassentertainment{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
-#cuisineelements{display:none; font-size:  1.5vh;} .dropclasscuisine{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
+#natureelements{display:none; font-size: 1.2vh;}   .dropclassnature{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
+#cultureelements{display:none; font-size:  1.2vh;}  .dropclassculture{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
+#entertainmentelements{display:none; font-size: 1.2vh;} .dropclassentertainment{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
+#cuisineelements{display:none; font-size:  1.2vh;} .dropclasscuisine{margin-bottom: 0.72vh; padding:0.6vh; border-style: solid; border-color: rgba(0,0,0,0); border-width: 0.198vh;}
 
-.droptitle{user-select: none; margin-top: 1vh; font-size: 1.8vh; padding-left:1.2vw; padding-right:1.2vw; padding-top: 1.2vh; padding-bottom: 1.2vh; transition: background-color .9s; border-style: solid; border-color: rgba(0,0,0,0);}
+.droptitle{user-select: none; margin-top: 1vh; font-size: 1.5vh; padding-left:1.2vw; padding-right:1.2vw; padding-top: 1.2vh; padding-bottom: 1.2vh; transition: background-color .9s; border-style: solid; border-color: rgba(0,0,0,0);}
 .droptitle:hover{border-style: solid; border-color: whitesmoke; border-width: 0.108vw;}
 
+#activity_exp{font-size: 1.5vh;}
 #activities_container{display: flex; flex-direction: column; align-items: center;}
-#all_activities{display: flex; flex-direction: row; align-items: center; gap:6vh}
+#all_activities{display: flex; flex-direction: row; align-items: center; gap:3vh}
 #selection_items1{display: flex; flex-direction: column; color: whitesmoke; font-size: 1.56vh; gap:0.3vw; margin: 0.12vw; user-select: none;}
 #selection_items2{display: flex; flex-direction: column; color: whitesmoke; font-size: 1.56vh; gap:0.3vw;  margin: 0.12vw; user-select: none; }
 #selection_items3{display: flex; flex-direction: column; color: whitesmoke; font-size: 1.56vh; gap:0.3vw;  margin: 0.12vw; user-select: none; }
@@ -368,28 +367,28 @@ button:hover{background-color: rgba(240,240,240, 0.6);}
     background: rgba(0,0,0,0.84);
     cursor: pointer; 
   }
-#warning{text-align: center; font-size: 0.9vh; color:rgba(240,0,0,0.66); user-select: none;}
+#warning{text-align: center; font-size: 0.6vh; color:rgba(240,0,0,0.66); user-select: none;}
 
 #climate_section{display: flex; flex-direction: column;}
-#climate_advanced_explanation_container{position: absolute; z-index: 6; visibility: hidden;}
+
+#climate_exp{font-size: 1.5vh;}
+#climate_advanced_explanation_container{position: absolute; z-index: 6; visibility: hidden; font-size: 1.5vh;}
 
 .climate_advanced_explanation{visibility: hidden;}
 #climate_read_less{visibility: hidden;}
 .more_buttons{text-decoration: underline;}
 
-#ultimateresult{display: none; flex-direction: column; gap:3vh; margin-top: 15vh;}
-#resulttitle{font-weight: bolder; font-size: 4.8vw; text-align: center; color: whitesmoke; user-select: none;}
-.resultrows{display: flex; flex-direction: row; text-align: center; justify-content: space-evenly;} 
-.eachresult{width:30%; color: white; font-size: 2.4vw; user-select: none; padding-top:7.8vh; padding-bottom:7.8vh; background-size: cover; border-style: solid; border-color: rgba(0,0,0,0);}
+#ultimateresult{display: none; flex-direction: column; gap:3vh; margin-top: 15vh; }
+#resulttitle{font-weight: bolder; font-size: 7.8vw; text-align: center; color: whitesmoke; user-select: none;}
+.resultrows{display: flex; flex-direction: column; text-align: center; justify-content: space-around; gap:3.6vh; align-items: center;} 
+.eachresult{width:80%; height:42%; color: white; font-size: 3vh; user-select: none; padding-top:7.8vh; padding-bottom:7.8vh; background-size: cover; border-style: solid; border-color: rgba(0,0,0,0);}
 .eachresult:hover{border-color: snow; color: black;}
-#reset{width:20vw; margin-left: 40vw; margin-top: 3vh; margin-bottom: 3vh; font-size: 2.7vw; font-weight: bolder; padding: 0.6vw 3.6vw 0.6vw 3.6vw; border-width: 3px; background-color: rgba(240,240,240, 0.78); color:black; border-style: groove;}
+#reset{width:40vw; margin-left:30vw; margin-top: 3vh; margin-bottom: 3vh; font-size: 3vh; font-weight: bolder; padding: 0.6vw 3.6vw 0.6vw 3.6vw; border-width: 3px; background-color: rgba(240,240,240, 0.78); color:black; border-style: groove;}
 #reset:hover{background-color: rgba(0,0,0,0.84); color:rgba(240,240,240, 0.78); border-color: whitesmoke; border-style: groove;}
 
-
-
-#loading_screen{background-color: black; width: 100%; height: 100%; position: fixed; z-index: 12; display: none; user-select: none;}
-#loading_message1{font-size: 6vh; color: snow; margin-top: 24vh; user-select: none;}
-#loading_message2{font-size: 4.8vh; color: snow; margin-top: 3.6vh; user-select: none; animation-name: example7; animation-duration: 5.4s;}
+#loading_screen{background-color: black; width: 100%; height: 120%; position: fixed; z-index: 12; display: none; user-select: none; }
+#loading_message1{font-size: 6.6vw; color: snow; margin-top: 24vh; user-select: none;}
+#loading_message2{font-size: 4.8vw; color: snow; margin-top: 3.6vh; user-select: none; animation-name: example7; animation-duration: 5.4s;}
 #loading_symbol{margin-top: 12vh; user-select: none; display: flex; flex-direction: row; justify-content: center; gap: 2.4vh;}
 .animation_objects{width:6vh; height:6vh; border-radius: 18px;}
 
