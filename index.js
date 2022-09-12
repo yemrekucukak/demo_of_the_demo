@@ -466,11 +466,12 @@ const ultimate_result = document.getElementById('ultimateresult');
 const main_part = document.getElementById('main');
 
 const loading_screen = document.getElementById('loading_screen');
-const submit_button = document.getElementById('submit')
+const loading_text = document.getElementById('loading_message1');
+const submit_button = document.getElementById('submit');
 submit_button.addEventListener('click', ()=>{
     main_part.style.display = 'none';
     ultimate_result.style.display = 'flex';
-    loading_screen.style.display = 'block';
+
     resulting_array = temp_array.sort((a,b) => (a.score < b.score) ? 1 : ((b.score < a.score) ? -1 : 0)) 
     if(resulting_array.length >=9){
     suggestions = resulting_array.slice(0,9);}else{suggestions=resulting_array;}
@@ -479,13 +480,17 @@ submit_button.addEventListener('click', ()=>{
         each_suggestion[k].style.backgroundImage = suggestions[k].photo; 
         each_suggestion[k].style.borderColor = 'black';
     }
-    setTimeout(()=>{loading_screen.style.display='none'; }, 5400);
+    loading_text.innerText = "We're preparing a suggestion list";
+    loading_screen.style.display = 'block';
+    setTimeout(()=>{loading_screen.style.display='none'; }, 6000);
 })
 
 const reset_button = document.getElementById('reset');
 reset_button.addEventListener('click', ()=>{
     ultimate_result.style.display = 'none';
+    loading_text.innerText = "Resetting the system";
     main_part.style.display = 'flex';
+
     loading_screen.style.display = 'block';
 
     money_display.innerText = '240$'; sliderreader.value = 240;
@@ -505,7 +510,7 @@ reset_button.addEventListener('click', ()=>{
         }
         image_index = Math.floor(Math.random()*6);
         body.style.backgroundImage = background_image_list[image_index];
-        setTimeout(()=>{loading_screen.style.display='none'; }, 5400);
+        setTimeout(()=>{loading_screen.style.display='none'; }, 1800);
 
 })
 
@@ -518,7 +523,7 @@ const all_climate_buttons = document.getElementById('all_climate_buttons');
 
 climate_more_button.addEventListener('click', ()=>{
     
-    if(window.innerWidth < 600){
+    if(window.innerWidth < 1200){
         for(let p=0; p<all_climate_explanations.length; p++){all_climate_explanations[p].style.visibility = 'visible';}
         mother_climate_container.style.visibility = 'visible';
         all_climate_buttons.style.visibility = 'hidden';
@@ -537,7 +542,7 @@ climate_more_button.addEventListener('click', ()=>{
 
 climate_read_less.addEventListener('click', ()=>{
 
-    if(window.innerWidth < 600){
+    if(window.innerWidth < 1200){
         for(let p=0; p<all_climate_explanations.length; p++){all_climate_explanations[p].style.visibility = 'hidden';}
         mother_climate_container.style.visibility = 'hidden';
         all_climate_buttons.style.visibility = 'visible';
