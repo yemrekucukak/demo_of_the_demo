@@ -468,10 +468,15 @@ const main_part = document.getElementById('main');
 const loading_screen = document.getElementById('loading_screen');
 const loading_text = document.getElementById('loading_message1');
 const submit_button = document.getElementById('submit');
+
 submit_button.addEventListener('click', ()=>{
     main_part.style.display = 'none';
     ultimate_result.style.display = 'flex';
-
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+     });
     resulting_array = temp_array.sort((a,b) => (a.score < b.score) ? 1 : ((b.score < a.score) ? -1 : 0)) 
     if(resulting_array.length >=9){
     suggestions = resulting_array.slice(0,9);}else{suggestions=resulting_array;}
@@ -482,7 +487,7 @@ submit_button.addEventListener('click', ()=>{
     }
     loading_text.innerText = "We're preparing a suggestion list";
     loading_screen.style.display = 'block';
-    setTimeout(()=>{loading_screen.style.display='none'; }, 6000);
+    setTimeout(()=>{loading_screen.style.display='none'; }, 7200);
 })
 
 const reset_button = document.getElementById('reset');
@@ -490,6 +495,11 @@ reset_button.addEventListener('click', ()=>{
     ultimate_result.style.display = 'none';
     loading_text.innerText = "Resetting the system";
     main_part.style.display = 'flex';
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+     });
 
     loading_screen.style.display = 'block';
 
