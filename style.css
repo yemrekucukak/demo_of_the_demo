@@ -76,7 +76,7 @@ body{text-align: center; margin: 0; background-size: cover;}
 .selection{padding:0.96vw; border-style: solid; border-color: rgba(0,0,0,0); transition: background-color .4s;}
 .selection:hover{background-color: rgba(0,0,0,0.78);}
 
-button{font-size: 1.32vw; border-style: groove; padding-left: 6vw; padding-right: 6vw; 
+button{font-size: 1.32vw; border-style: groove; width:19.86vw;
     background-color: rgba(0,0,0,0.9); color: whitesmoke; margin-top: 0.9vw; border-bottom: 2vh; margin-right: 1vw;
     border-radius: 24px 0px 24px 0px; border-style: none;
     transition: background-color .6s;
